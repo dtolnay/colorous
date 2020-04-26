@@ -2,6 +2,7 @@
 mod macros;
 
 mod color;
+mod cubehelix;
 mod gradient;
 mod interpolate;
 
