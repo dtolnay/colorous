@@ -119,155 +119,155 @@ impl EvalGradient for SequentialMulti {
 pub const BLUE_GREEN: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "BuGn",
-        three: colors!(3; b"e5f5f9 99d8c9 2ca25f"),
-        four: colors!(4; b"edf8fb b2e2e2 66c2a4 238b45"),
-        five: colors!(5; b"edf8fb b2e2e2 66c2a4 2ca25f 006d2c"),
-        six: colors!(6; b"edf8fb ccece6 99d8c9 66c2a4 2ca25f 006d2c"),
-        seven: colors!(7; b"edf8fb ccece6 99d8c9 66c2a4 41ae76 238b45 005824"),
-        eight: colors!(8; b"f7fcfd e5f5f9 ccece6 99d8c9 66c2a4 41ae76 238b45 005824"),
-        nine: colors!(9; b"f7fcfd e5f5f9 ccece6 99d8c9 66c2a4 41ae76 238b45 006d2c 00441b"),
+        three: colors!(0xe5f5f9 0x99d8c9 0x2ca25f),
+        four: colors!(0xedf8fb 0xb2e2e2 0x66c2a4 0x238b45),
+        five: colors!(0xedf8fb 0xb2e2e2 0x66c2a4 0x2ca25f 0x006d2c),
+        six: colors!(0xedf8fb 0xccece6 0x99d8c9 0x66c2a4 0x2ca25f 0x006d2c),
+        seven: colors!(0xedf8fb 0xccece6 0x99d8c9 0x66c2a4 0x41ae76 0x238b45 0x005824),
+        eight: colors!(0xf7fcfd 0xe5f5f9 0xccece6 0x99d8c9 0x66c2a4 0x41ae76 0x238b45 0x005824),
+        nine: colors!(0xf7fcfd 0xe5f5f9 0xccece6 0x99d8c9 0x66c2a4 0x41ae76 0x238b45 0x006d2c 0x00441b),
     },
 };
 
 pub const BLUE_PURPLE: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "BuPu",
-        three: colors!(3; b"e0ecf4 9ebcda 8856a7"),
-        four: colors!(4; b"edf8fb b3cde3 8c96c6 88419d"),
-        five: colors!(5; b"edf8fb b3cde3 8c96c6 8856a7 810f7c"),
-        six: colors!(6; b"edf8fb bfd3e6 9ebcda 8c96c6 8856a7 810f7c"),
-        seven: colors!(7; b"edf8fb bfd3e6 9ebcda 8c96c6 8c6bb1 88419d 6e016b"),
-        eight: colors!(8; b"f7fcfd e0ecf4 bfd3e6 9ebcda 8c96c6 8c6bb1 88419d 6e016b"),
-        nine: colors!(9; b"f7fcfd e0ecf4 bfd3e6 9ebcda 8c96c6 8c6bb1 88419d 810f7c 4d004b"),
+        three: colors!(0xe0ecf4 0x9ebcda 0x8856a7),
+        four: colors!(0xedf8fb 0xb3cde3 0x8c96c6 0x88419d),
+        five: colors!(0xedf8fb 0xb3cde3 0x8c96c6 0x8856a7 0x810f7c),
+        six: colors!(0xedf8fb 0xbfd3e6 0x9ebcda 0x8c96c6 0x8856a7 0x810f7c),
+        seven: colors!(0xedf8fb 0xbfd3e6 0x9ebcda 0x8c96c6 0x8c6bb1 0x88419d 0x6e016b),
+        eight: colors!(0xf7fcfd 0xe0ecf4 0xbfd3e6 0x9ebcda 0x8c96c6 0x8c6bb1 0x88419d 0x6e016b),
+        nine: colors!(0xf7fcfd 0xe0ecf4 0xbfd3e6 0x9ebcda 0x8c96c6 0x8c6bb1 0x88419d 0x810f7c 0x4d004b),
     },
 };
 
 pub const GREEN_BLUE: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "GnBu",
-        three: colors!(3; b"e0f3db a8ddb5 43a2ca"),
-        four: colors!(4; b"f0f9e8 bae4bc 7bccc4 2b8cbe"),
-        five: colors!(5; b"f0f9e8 bae4bc 7bccc4 43a2ca 0868ac"),
-        six: colors!(6; b"f0f9e8 ccebc5 a8ddb5 7bccc4 43a2ca 0868ac"),
-        seven: colors!(7; b"f0f9e8 ccebc5 a8ddb5 7bccc4 4eb3d3 2b8cbe 08589e"),
-        eight: colors!(8; b"f7fcf0 e0f3db ccebc5 a8ddb5 7bccc4 4eb3d3 2b8cbe 08589e"),
-        nine: colors!(9; b"f7fcf0 e0f3db ccebc5 a8ddb5 7bccc4 4eb3d3 2b8cbe 0868ac 084081"),
+        three: colors!(0xe0f3db 0xa8ddb5 0x43a2ca),
+        four: colors!(0xf0f9e8 0xbae4bc 0x7bccc4 0x2b8cbe),
+        five: colors!(0xf0f9e8 0xbae4bc 0x7bccc4 0x43a2ca 0x0868ac),
+        six: colors!(0xf0f9e8 0xccebc5 0xa8ddb5 0x7bccc4 0x43a2ca 0x0868ac),
+        seven: colors!(0xf0f9e8 0xccebc5 0xa8ddb5 0x7bccc4 0x4eb3d3 0x2b8cbe 0x08589e),
+        eight: colors!(0xf7fcf0 0xe0f3db 0xccebc5 0xa8ddb5 0x7bccc4 0x4eb3d3 0x2b8cbe 0x08589e),
+        nine: colors!(0xf7fcf0 0xe0f3db 0xccebc5 0xa8ddb5 0x7bccc4 0x4eb3d3 0x2b8cbe 0x0868ac 0x084081),
     },
 };
 
 pub const ORANGE_RED: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "OrRd",
-        three: colors!(3; b"fee8c8 fdbb84 e34a33"),
-        four: colors!(4; b"fef0d9 fdcc8a fc8d59 d7301f"),
-        five: colors!(5; b"fef0d9 fdcc8a fc8d59 e34a33 b30000"),
-        six: colors!(6; b"fef0d9 fdd49e fdbb84 fc8d59 e34a33 b30000"),
-        seven: colors!(7; b"fef0d9 fdd49e fdbb84 fc8d59 ef6548 d7301f 990000"),
-        eight: colors!(8; b"fff7ec fee8c8 fdd49e fdbb84 fc8d59 ef6548 d7301f 990000"),
-        nine: colors!(9; b"fff7ec fee8c8 fdd49e fdbb84 fc8d59 ef6548 d7301f b30000 7f0000"),
+        three: colors!(0xfee8c8 0xfdbb84 0xe34a33),
+        four: colors!(0xfef0d9 0xfdcc8a 0xfc8d59 0xd7301f),
+        five: colors!(0xfef0d9 0xfdcc8a 0xfc8d59 0xe34a33 0xb30000),
+        six: colors!(0xfef0d9 0xfdd49e 0xfdbb84 0xfc8d59 0xe34a33 0xb30000),
+        seven: colors!(0xfef0d9 0xfdd49e 0xfdbb84 0xfc8d59 0xef6548 0xd7301f 0x990000),
+        eight: colors!(0xfff7ec 0xfee8c8 0xfdd49e 0xfdbb84 0xfc8d59 0xef6548 0xd7301f 0x990000),
+        nine: colors!(0xfff7ec 0xfee8c8 0xfdd49e 0xfdbb84 0xfc8d59 0xef6548 0xd7301f 0xb30000 0x7f0000),
     },
 };
 
 pub const PURPLE_BLUE_GREEN: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "PuBuGn",
-        three: colors!(3; b"ece2f0 a6bddb 1c9099"),
-        four: colors!(4; b"f6eff7 bdc9e1 67a9cf 02818a"),
-        five: colors!(5; b"f6eff7 bdc9e1 67a9cf 1c9099 016c59"),
-        six: colors!(6; b"f6eff7 d0d1e6 a6bddb 67a9cf 1c9099 016c59"),
-        seven: colors!(7; b"f6eff7 d0d1e6 a6bddb 67a9cf 3690c0 02818a 016450"),
-        eight: colors!(8; b"fff7fb ece2f0 d0d1e6 a6bddb 67a9cf 3690c0 02818a 016450"),
-        nine: colors!(9; b"fff7fb ece2f0 d0d1e6 a6bddb 67a9cf 3690c0 02818a 016c59 014636"),
+        three: colors!(0xece2f0 0xa6bddb 0x1c9099),
+        four: colors!(0xf6eff7 0xbdc9e1 0x67a9cf 0x02818a),
+        five: colors!(0xf6eff7 0xbdc9e1 0x67a9cf 0x1c9099 0x016c59),
+        six: colors!(0xf6eff7 0xd0d1e6 0xa6bddb 0x67a9cf 0x1c9099 0x016c59),
+        seven: colors!(0xf6eff7 0xd0d1e6 0xa6bddb 0x67a9cf 0x3690c0 0x02818a 0x016450),
+        eight: colors!(0xfff7fb 0xece2f0 0xd0d1e6 0xa6bddb 0x67a9cf 0x3690c0 0x02818a 0x016450),
+        nine: colors!(0xfff7fb 0xece2f0 0xd0d1e6 0xa6bddb 0x67a9cf 0x3690c0 0x02818a 0x016c59 0x014636),
     },
 };
 
 pub const PURPLE_BLUE: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "PuBu",
-        three: colors!(3; b"ece7f2 a6bddb 2b8cbe"),
-        four: colors!(4; b"f1eef6 bdc9e1 74a9cf 0570b0"),
-        five: colors!(5; b"f1eef6 bdc9e1 74a9cf 2b8cbe 045a8d"),
-        six: colors!(6; b"f1eef6 d0d1e6 a6bddb 74a9cf 2b8cbe 045a8d"),
-        seven: colors!(7; b"f1eef6 d0d1e6 a6bddb 74a9cf 3690c0 0570b0 034e7b"),
-        eight: colors!(8; b"fff7fb ece7f2 d0d1e6 a6bddb 74a9cf 3690c0 0570b0 034e7b"),
-        nine: colors!(9; b"fff7fb ece7f2 d0d1e6 a6bddb 74a9cf 3690c0 0570b0 045a8d 023858"),
+        three: colors!(0xece7f2 0xa6bddb 0x2b8cbe),
+        four: colors!(0xf1eef6 0xbdc9e1 0x74a9cf 0x0570b0),
+        five: colors!(0xf1eef6 0xbdc9e1 0x74a9cf 0x2b8cbe 0x045a8d),
+        six: colors!(0xf1eef6 0xd0d1e6 0xa6bddb 0x74a9cf 0x2b8cbe 0x045a8d),
+        seven: colors!(0xf1eef6 0xd0d1e6 0xa6bddb 0x74a9cf 0x3690c0 0x0570b0 0x034e7b),
+        eight: colors!(0xfff7fb 0xece7f2 0xd0d1e6 0xa6bddb 0x74a9cf 0x3690c0 0x0570b0 0x034e7b),
+        nine: colors!(0xfff7fb 0xece7f2 0xd0d1e6 0xa6bddb 0x74a9cf 0x3690c0 0x0570b0 0x045a8d 0x023858),
     },
 };
 
 pub const PURPLE_RED: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "PuRd",
-        three: colors!(3; b"e7e1ef c994c7 dd1c77"),
-        four: colors!(4; b"f1eef6 d7b5d8 df65b0 ce1256"),
-        five: colors!(5; b"f1eef6 d7b5d8 df65b0 dd1c77 980043"),
-        six: colors!(6; b"f1eef6 d4b9da c994c7 df65b0 dd1c77 980043"),
-        seven: colors!(7; b"f1eef6 d4b9da c994c7 df65b0 e7298a ce1256 91003f"),
-        eight: colors!(8; b"f7f4f9 e7e1ef d4b9da c994c7 df65b0 e7298a ce1256 91003f"),
-        nine: colors!(9; b"f7f4f9 e7e1ef d4b9da c994c7 df65b0 e7298a ce1256 980043 67001f"),
+        three: colors!(0xe7e1ef 0xc994c7 0xdd1c77),
+        four: colors!(0xf1eef6 0xd7b5d8 0xdf65b0 0xce1256),
+        five: colors!(0xf1eef6 0xd7b5d8 0xdf65b0 0xdd1c77 0x980043),
+        six: colors!(0xf1eef6 0xd4b9da 0xc994c7 0xdf65b0 0xdd1c77 0x980043),
+        seven: colors!(0xf1eef6 0xd4b9da 0xc994c7 0xdf65b0 0xe7298a 0xce1256 0x91003f),
+        eight: colors!(0xf7f4f9 0xe7e1ef 0xd4b9da 0xc994c7 0xdf65b0 0xe7298a 0xce1256 0x91003f),
+        nine: colors!(0xf7f4f9 0xe7e1ef 0xd4b9da 0xc994c7 0xdf65b0 0xe7298a 0xce1256 0x980043 0x67001f),
     },
 };
 
 pub const RED_PURPLE: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "RdPu",
-        three: colors!(3; b"fde0dd fa9fb5 c51b8a"),
-        four: colors!(4; b"feebe2 fbb4b9 f768a1 ae017e"),
-        five: colors!(5; b"feebe2 fbb4b9 f768a1 c51b8a 7a0177"),
-        six: colors!(6; b"feebe2 fcc5c0 fa9fb5 f768a1 c51b8a 7a0177"),
-        seven: colors!(7; b"feebe2 fcc5c0 fa9fb5 f768a1 dd3497 ae017e 7a0177"),
-        eight: colors!(8; b"fff7f3 fde0dd fcc5c0 fa9fb5 f768a1 dd3497 ae017e 7a0177"),
-        nine: colors!(9; b"fff7f3 fde0dd fcc5c0 fa9fb5 f768a1 dd3497 ae017e 7a0177 49006a"),
+        three: colors!(0xfde0dd 0xfa9fb5 0xc51b8a),
+        four: colors!(0xfeebe2 0xfbb4b9 0xf768a1 0xae017e),
+        five: colors!(0xfeebe2 0xfbb4b9 0xf768a1 0xc51b8a 0x7a0177),
+        six: colors!(0xfeebe2 0xfcc5c0 0xfa9fb5 0xf768a1 0xc51b8a 0x7a0177),
+        seven: colors!(0xfeebe2 0xfcc5c0 0xfa9fb5 0xf768a1 0xdd3497 0xae017e 0x7a0177),
+        eight: colors!(0xfff7f3 0xfde0dd 0xfcc5c0 0xfa9fb5 0xf768a1 0xdd3497 0xae017e 0x7a0177),
+        nine: colors!(0xfff7f3 0xfde0dd 0xfcc5c0 0xfa9fb5 0xf768a1 0xdd3497 0xae017e 0x7a0177 0x49006a),
     },
 };
 
 pub const YELLOW_GREEN_BLUE: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "YlGnBu",
-        three: colors!(3; b"edf8b1 7fcdbb 2c7fb8"),
-        four: colors!(4; b"ffffcc a1dab4 41b6c4 225ea8"),
-        five: colors!(5; b"ffffcc a1dab4 41b6c4 2c7fb8 253494"),
-        six: colors!(6; b"ffffcc c7e9b4 7fcdbb 41b6c4 2c7fb8 253494"),
-        seven: colors!(7; b"ffffcc c7e9b4 7fcdbb 41b6c4 1d91c0 225ea8 0c2c84"),
-        eight: colors!(8; b"ffffd9 edf8b1 c7e9b4 7fcdbb 41b6c4 1d91c0 225ea8 0c2c84"),
-        nine: colors!(9; b"ffffd9 edf8b1 c7e9b4 7fcdbb 41b6c4 1d91c0 225ea8 253494 081d58"),
+        three: colors!(0xedf8b1 0x7fcdbb 0x2c7fb8),
+        four: colors!(0xffffcc 0xa1dab4 0x41b6c4 0x225ea8),
+        five: colors!(0xffffcc 0xa1dab4 0x41b6c4 0x2c7fb8 0x253494),
+        six: colors!(0xffffcc 0xc7e9b4 0x7fcdbb 0x41b6c4 0x2c7fb8 0x253494),
+        seven: colors!(0xffffcc 0xc7e9b4 0x7fcdbb 0x41b6c4 0x1d91c0 0x225ea8 0x0c2c84),
+        eight: colors!(0xffffd9 0xedf8b1 0xc7e9b4 0x7fcdbb 0x41b6c4 0x1d91c0 0x225ea8 0x0c2c84),
+        nine: colors!(0xffffd9 0xedf8b1 0xc7e9b4 0x7fcdbb 0x41b6c4 0x1d91c0 0x225ea8 0x253494 0x081d58),
     },
 };
 
 pub const YELLOW_GREEN: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "YlGn",
-        three: colors!(3; b"f7fcb9 addd8e 31a354"),
-        four: colors!(4; b"ffffcc c2e699 78c679 238443"),
-        five: colors!(5; b"ffffcc c2e699 78c679 31a354 006837"),
-        six: colors!(6; b"ffffcc d9f0a3 addd8e 78c679 31a354 006837"),
-        seven: colors!(7; b"ffffcc d9f0a3 addd8e 78c679 41ab5d 238443 005a32"),
-        eight: colors!(8; b"ffffe5 f7fcb9 d9f0a3 addd8e 78c679 41ab5d 238443 005a32"),
-        nine: colors!(9; b"ffffe5 f7fcb9 d9f0a3 addd8e 78c679 41ab5d 238443 006837 004529"),
+        three: colors!(0xf7fcb9 0xaddd8e 0x31a354),
+        four: colors!(0xffffcc 0xc2e699 0x78c679 0x238443),
+        five: colors!(0xffffcc 0xc2e699 0x78c679 0x31a354 0x006837),
+        six: colors!(0xffffcc 0xd9f0a3 0xaddd8e 0x78c679 0x31a354 0x006837),
+        seven: colors!(0xffffcc 0xd9f0a3 0xaddd8e 0x78c679 0x41ab5d 0x238443 0x005a32),
+        eight: colors!(0xffffe5 0xf7fcb9 0xd9f0a3 0xaddd8e 0x78c679 0x41ab5d 0x238443 0x005a32),
+        nine: colors!(0xffffe5 0xf7fcb9 0xd9f0a3 0xaddd8e 0x78c679 0x41ab5d 0x238443 0x006837 0x004529),
     },
 };
 
 pub const YELLOW_ORANGE_BROWN: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "YlOrBr",
-        three: colors!(3; b"fff7bc fec44f d95f0e"),
-        four: colors!(4; b"ffffd4 fed98e fe9929 cc4c02"),
-        five: colors!(5; b"ffffd4 fed98e fe9929 d95f0e 993404"),
-        six: colors!(6; b"ffffd4 fee391 fec44f fe9929 d95f0e 993404"),
-        seven: colors!(7; b"ffffd4 fee391 fec44f fe9929 ec7014 cc4c02 8c2d04"),
-        eight: colors!(8; b"ffffe5 fff7bc fee391 fec44f fe9929 ec7014 cc4c02 8c2d04"),
-        nine: colors!(9; b"ffffe5 fff7bc fee391 fec44f fe9929 ec7014 cc4c02 993404 662506"),
+        three: colors!(0xfff7bc 0xfec44f 0xd95f0e),
+        four: colors!(0xffffd4 0xfed98e 0xfe9929 0xcc4c02),
+        five: colors!(0xffffd4 0xfed98e 0xfe9929 0xd95f0e 0x993404),
+        six: colors!(0xffffd4 0xfee391 0xfec44f 0xfe9929 0xd95f0e 0x993404),
+        seven: colors!(0xffffd4 0xfee391 0xfec44f 0xfe9929 0xec7014 0xcc4c02 0x8c2d04),
+        eight: colors!(0xffffe5 0xfff7bc 0xfee391 0xfec44f 0xfe9929 0xec7014 0xcc4c02 0x8c2d04),
+        nine: colors!(0xffffe5 0xfff7bc 0xfee391 0xfec44f 0xfe9929 0xec7014 0xcc4c02 0x993404 0x662506),
     },
 };
 
 pub const YELLOW_ORANGE_RED: Gradient = Gradient {
     eval: &SequentialMulti {
         name: "YlOrRd",
-        three: colors!(3; b"ffeda0 feb24c f03b20"),
-        four: colors!(4; b"ffffb2 fecc5c fd8d3c e31a1c"),
-        five: colors!(5; b"ffffb2 fecc5c fd8d3c f03b20 bd0026"),
-        six: colors!(6; b"ffffb2 fed976 feb24c fd8d3c f03b20 bd0026"),
-        seven: colors!(7; b"ffffb2 fed976 feb24c fd8d3c fc4e2a e31a1c b10026"),
-        eight: colors!(8; b"ffffcc ffeda0 fed976 feb24c fd8d3c fc4e2a e31a1c b10026"),
-        nine: colors!(9; b"ffffcc ffeda0 fed976 feb24c fd8d3c fc4e2a e31a1c bd0026 800026"),
+        three: colors!(0xffeda0 0xfeb24c 0xf03b20),
+        four: colors!(0xffffb2 0xfecc5c 0xfd8d3c 0xe31a1c),
+        five: colors!(0xffffb2 0xfecc5c 0xfd8d3c 0xf03b20 0xbd0026),
+        six: colors!(0xffffb2 0xfed976 0xfeb24c 0xfd8d3c 0xf03b20 0xbd0026),
+        seven: colors!(0xffffb2 0xfed976 0xfeb24c 0xfd8d3c 0xfc4e2a 0xe31a1c 0xb10026),
+        eight: colors!(0xffffcc 0xffeda0 0xfed976 0xfeb24c 0xfd8d3c 0xfc4e2a 0xe31a1c 0xb10026),
+        nine: colors!(0xffffcc 0xffeda0 0xfed976 0xfeb24c 0xfd8d3c 0xfc4e2a 0xe31a1c 0xbd0026 0x800026),
     },
 };

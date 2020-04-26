@@ -1,41 +1,41 @@
 use crate::Color;
 
 pub const ACCENT: [Color; 8] = colors! {
-    8; b"7fc97f beaed4 fdc086 ffff99 386cb0 f0027f bf5b17 666666"
+    0x7fc97f 0xbeaed4 0xfdc086 0xffff99 0x386cb0 0xf0027f 0xbf5b17 0x666666
 };
 
 pub const DARK2: [Color; 8] = colors! {
-    8; b"1b9e77 d95f02 7570b3 e7298a 66a61e e6ab02 a6761d 666666"
+    0x1b9e77 0xd95f02 0x7570b3 0xe7298a 0x66a61e 0xe6ab02 0xa6761d 0x666666
 };
 
 pub const PAIRED: [Color; 12] = colors! {
-    12; b"a6cee3 1f78b4 b2df8a 33a02c fb9a99 e31a1c fdbf6f ff7f00 cab2d6 6a3d9a ffff99 b15928"
+    0xa6cee3 0x1f78b4 0xb2df8a 0x33a02c 0xfb9a99 0xe31a1c 0xfdbf6f 0xff7f00 0xcab2d6 0x6a3d9a 0xffff99 0xb15928
 };
 
 pub const PASTEL1: [Color; 9] = colors! {
-    9; b"fbb4ae b3cde3 ccebc5 decbe4 fed9a6 ffffcc e5d8bd fddaec f2f2f2"
+    0xfbb4ae 0xb3cde3 0xccebc5 0xdecbe4 0xfed9a6 0xffffcc 0xe5d8bd 0xfddaec 0xf2f2f2
 };
 
 pub const PASTEL2: [Color; 8] = colors! {
-    8; b"b3e2cd fdcdac cbd5e8 f4cae4 e6f5c9 fff2ae f1e2cc cccccc"
+    0xb3e2cd 0xfdcdac 0xcbd5e8 0xf4cae4 0xe6f5c9 0xfff2ae 0xf1e2cc 0xcccccc
 };
 
 pub const SET1: [Color; 9] = colors! {
-    9; b"e41a1c 377eb8 4daf4a 984ea3 ff7f00 ffff33 a65628 f781bf 999999"
+    0xe41a1c 0x377eb8 0x4daf4a 0x984ea3 0xff7f00 0xffff33 0xa65628 0xf781bf 0x999999
 };
 
 pub const SET2: [Color; 8] = colors! {
-    8; b"66c2a5 fc8d62 8da0cb e78ac3 a6d854 ffd92f e5c494 b3b3b3"
+    0x66c2a5 0xfc8d62 0x8da0cb 0xe78ac3 0xa6d854 0xffd92f 0xe5c494 0xb3b3b3
 };
 
 pub const SET3: [Color; 12] = colors! {
-    12; b"8dd3c7 ffffb3 bebada fb8072 80b1d3 fdb462 b3de69 fccde5 d9d9d9 bc80bd ccebc5 ffed6f"
+    0x8dd3c7 0xffffb3 0xbebada 0xfb8072 0x80b1d3 0xfdb462 0xb3de69 0xfccde5 0xd9d9d9 0xbc80bd 0xccebc5 0xffed6f
 };
 
 pub const TABLEAU10: [Color; 10] = colors! {
-    10; b"4e79a7 f28e2c e15759 76b7b2 59a14f edc949 af7aa1 ff9da7 9c755f bab0ab"
+    0x4e79a7 0xf28e2c 0xe15759 0x76b7b2 0x59a14f 0xedc949 0xaf7aa1 0xff9da7 0x9c755f 0xbab0ab
 };
 
 pub const CATEGORY10: [Color; 10] = colors! {
-    10; b"1f77b4 ff7f0e 2ca02c d62728 9467bd 8c564b e377c2 7f7f7f bcbd22 17becf"
+    0x1f77b4 0xff7f0e 0x2ca02c 0xd62728 0x9467bd 0x8c564b 0xe377c2 0x7f7f7f 0xbcbd22 0x17becf
 };
