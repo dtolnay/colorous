@@ -1,6 +1,31 @@
 use crate::gradient::EvalGradient;
 use crate::{interpolate, Color, Gradient};
 
+pub const TURBO: Gradient = Gradient { eval: &Turbo };
+
+struct Turbo;
+
+impl EvalGradient for Turbo {
+    fn name(&self) -> &'static str {
+        "Turbo"
+    }
+
+    fn eval_continuous(&self, t: f64) -> Color {
+        let r = (34.61
+            + t * (1172.33 - t * (10793.56 - t * (33300.12 - t * (38394.49 - t * 14825.05)))))
+            .max(0.0)
+            .min(255.0) as u8;
+        let g = (23.31 + t * (557.33 + t * (1225.33 - t * (3574.96 - t * (1073.77 + t * 707.56)))))
+            .max(0.0)
+            .min(255.0) as u8;
+        let b = (27.2
+            + t * (3211.1 - t * (15327.97 - t * (27814.0 - t * (22569.18 - t * 6838.66)))))
+            .max(0.0)
+            .min(255.0) as u8;
+        Color { r, g, b }
+    }
+}
+
 #[derive(Copy, Clone)]
 struct SequentialMulti {
     name: &'static str,
