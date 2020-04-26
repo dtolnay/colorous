@@ -1,6 +1,6 @@
 use std::fmt::{self, Debug, LowerHex, UpperHex};
 
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Default)]
 pub struct Color {
     pub r: u8,
     pub g: u8,
