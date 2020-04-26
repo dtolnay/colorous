@@ -225,29 +225,37 @@ impl EvalGradient for Cividis {
     }
 }
 
-pub const WARM: Gradient = Gradient { eval: &Warm };
+struct InterpolateCubehelix {
+    name: &'static str,
+    start: Cubehelix,
+    end: Cubehelix,
+}
 
-struct Warm;
-
-impl EvalGradient for Warm {
+impl EvalGradient for InterpolateCubehelix {
     fn name(&self) -> &'static str {
-        "Warm"
+        self.name
     }
 
     fn eval_continuous(&self, t: f64) -> Color {
-        let start = Cubehelix {
+        cubehelix::interpolate(self.start, self.end, t).into()
+    }
+}
+
+pub const WARM: Gradient = Gradient {
+    eval: &InterpolateCubehelix {
+        name: "Warm",
+        start: Cubehelix {
             h: -100.0,
             s: 0.75,
             l: 0.35,
-        };
-        let end = Cubehelix {
+        },
+        end: Cubehelix {
             h: 80.0,
             s: 1.5,
             l: 0.8,
-        };
-        cubehelix::interpolate(start, end, t).into()
-    }
-}
+        },
+    },
+};
 
 #[derive(Copy, Clone)]
 struct SequentialMulti {

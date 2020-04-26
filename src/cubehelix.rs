@@ -1,6 +1,7 @@
 use crate::Color;
 use std::f64::consts as f64;
 
+#[derive(Copy, Clone)]
 pub(crate) struct Cubehelix {
     pub h: f64,
     pub s: f64,
