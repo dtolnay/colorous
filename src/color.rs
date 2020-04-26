@@ -1,10 +1,17 @@
 use std::fmt::{self, Debug, LowerHex, UpperHex};
 
-#[derive(Copy, Clone, Default)]
+#[derive(Copy, Clone)]
 pub struct Color {
     pub r: u8,
     pub g: u8,
     pub b: u8,
+}
+
+/// `#000000`
+impl Default for Color {
+    fn default() -> Self {
+        Color { r: 0, g: 0, b: 0 }
+    }
 }
 
 pub(crate) const fn color(n: u32) -> Color {
