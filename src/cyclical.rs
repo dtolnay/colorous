@@ -1,8 +1,26 @@
+use crate::cubehelix::Cubehelix;
 use crate::gradient::EvalGradient;
 use crate::{Color, Gradient};
 use std::f64::consts as f64;
 
+pub const RAINBOW: Gradient = Gradient { eval: &Rainbow };
 pub const SINEBOW: Gradient = Gradient { eval: &Sinebow };
+
+struct Rainbow;
+
+impl EvalGradient for Rainbow {
+    fn name(&self) -> &'static str {
+        "Rainbow"
+    }
+
+    fn eval_continuous(&self, t: f64) -> Color {
+        let ts = (t - 0.5).abs();
+        let h = 360.0 * t - 100.0;
+        let s = 1.5 - 1.5 * ts;
+        let l = 0.8 - 0.9 * ts;
+        Cubehelix { h, s, l }.into()
+    }
+}
 
 struct Sinebow;
 
