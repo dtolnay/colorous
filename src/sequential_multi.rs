@@ -257,6 +257,22 @@ pub const WARM: Gradient = Gradient {
     },
 };
 
+pub const COOL: Gradient = Gradient {
+    eval: &InterpolateCubehelix {
+        name: "Cool",
+        start: Cubehelix {
+            h: 260.0,
+            s: 0.75,
+            l: 0.35,
+        },
+        end: Cubehelix {
+            h: 80.0,
+            s: 1.5,
+            l: 0.8,
+        },
+    },
+};
+
 #[derive(Copy, Clone)]
 struct SequentialMulti {
     name: &'static str,
