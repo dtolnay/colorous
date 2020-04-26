@@ -14,13 +14,7 @@ impl Gradient {
     }
 
     pub fn eval_continuous(&self, t: f64) -> Color {
-        let t = if t < 0.0 {
-            0.0
-        } else if t > 1.0 {
-            1.0
-        } else {
-            t
-        };
+        let t = t.max(0.0).min(1.0);
         self.eval.eval_continuous(t)
     }
 }
