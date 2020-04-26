@@ -26,9 +26,25 @@ impl EvalGradient for Turbo {
     }
 }
 
+struct Ramp {
+    name: &'static str,
+    colors: &'static [Color],
+}
+
+impl EvalGradient for Ramp {
+    fn name(&self) -> &'static str {
+        self.name
+    }
+
+    fn eval_continuous(&self, t: f64) -> Color {
+        interpolate::spline(&self.colors, t)
+    }
+}
+
 pub const VIRIDIS: Gradient = Gradient {
-    eval: &Viridis {
-        colors: colors! {
+    eval: &Ramp {
+        name: "Viridis",
+        colors: &colors! {
             0x440154 0x440256 0x450457 0x450559 0x46075a 0x46085c 0x460a5d 0x460b5e
             0x470d60 0x470e61 0x471063 0x471164 0x471365 0x481467 0x481668 0x481769
             0x48186a 0x481a6c 0x481b6d 0x481c6e 0x481d6f 0x481f70 0x482071 0x482173
@@ -64,20 +80,6 @@ pub const VIRIDIS: Gradient = Gradient {
         },
     },
 };
-
-struct Viridis {
-    colors: [Color; 256],
-}
-
-impl EvalGradient for Viridis {
-    fn name(&self) -> &'static str {
-        "Viridis"
-    }
-
-    fn eval_continuous(&self, t: f64) -> Color {
-        interpolate::spline(&self.colors, t)
-    }
-}
 
 #[derive(Copy, Clone)]
 struct SequentialMulti {
