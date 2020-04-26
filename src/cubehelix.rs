@@ -21,3 +21,11 @@ impl From<Cubehelix> for Color {
         Color { r, g, b }
     }
 }
+
+pub(crate) fn interpolate(start: Cubehelix, end: Cubehelix, t: f64) -> Cubehelix {
+    Cubehelix {
+        h: start.h + t * (end.h - start.h),
+        s: start.s + t * (end.s - start.s),
+        l: start.l + t * (end.l - start.l),
+    }
+}
