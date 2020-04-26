@@ -7,6 +7,14 @@ pub struct Color {
     pub b: u8,
 }
 
+pub(crate) const fn color(n: u32) -> Color {
+    Color {
+        r: ((n >> 16) & 0xff) as u8,
+        g: ((n >> 8) & 0xff) as u8,
+        b: (n & 0xff) as u8,
+    }
+}
+
 impl Debug for Color {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         f.write_str("Color(#")?;
