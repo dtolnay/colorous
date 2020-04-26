@@ -13,6 +13,21 @@ struct SequentialSingle {
 }
 
 impl EvalGradient for SequentialSingle {
+    fn eval_rational(&self, i: usize, n: usize) -> Color {
+        match n {
+            0 | 1 => self.three[2],
+            2 => self.three[i * 2],
+            3 => self.three[i],
+            4 => self.four[i],
+            5 => self.five[i],
+            6 => self.six[i],
+            7 => self.seven[i],
+            8 => self.eight[i],
+            9 => self.nine[i],
+            _ => self.eval_continuous(i as f64 / (n - 1) as f64),
+        }
+    }
+
     fn eval_continuous(&self, t: f64) -> Color {
         interpolate::spline(&self.nine, t)
     }
