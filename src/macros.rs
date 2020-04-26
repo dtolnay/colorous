@@ -65,7 +65,8 @@ macro_rules! colors {
         let h = $hex;
         [c!(h.0), c!(h.1), c!(h.2), c!(h.3), c!(h.4), c!(h.5), c!(h.6), c!(h.7), c!(h.8), c!(h.9), c!(h.10)]
     }};
-    ($($hex:literal),* $(,)?) => {
-        [$(c!(*$hex)),*]
-    };
+    (12; $hex:literal) => {{
+        let h = $hex;
+        [c!(h.0), c!(h.1), c!(h.2), c!(h.3), c!(h.4), c!(h.5), c!(h.6), c!(h.7), c!(h.8), c!(h.9), c!(h.10), c!(h.11)]
+    }};
 }
