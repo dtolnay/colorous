@@ -21,9 +21,9 @@ macro_rules! c {
         use crate::macros::HEX;
         let [rh, rl, gh, gl, bh, bl] = $hex;
         crate::Color {
-            r: (HEX[rh as usize] + 1 - 1) * 16 + (HEX[rl as usize] + 1 - 1),
-            g: (HEX[gh as usize] + 1 - 1) * 16 + (HEX[gl as usize] + 1 - 1),
-            b: (HEX[bh as usize] + 1 - 1) * 16 + (HEX[bl as usize] + 1 - 1),
+            r: HEX[rh as usize] * 16 + HEX[rl as usize],
+            g: HEX[gh as usize] * 16 + HEX[gl as usize],
+            b: HEX[bh as usize] * 16 + HEX[bl as usize],
         }
     }};
 }
