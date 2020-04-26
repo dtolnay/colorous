@@ -2,6 +2,7 @@
 mod macros;
 
 pub mod categorical;
+pub mod sequential_multi;
 pub mod sequential_single;
 
 use std::fmt::{self, LowerHex, UpperHex};
