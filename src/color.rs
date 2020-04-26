@@ -24,9 +24,7 @@ pub(crate) const fn color(n: u32) -> Color {
 
 impl Debug for Color {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        f.write_str("Color(#")?;
-        LowerHex::fmt(self, f)?;
-        f.write_str(")")
+        write!(f, "Color(#{:x})", self)
     }
 }
 
