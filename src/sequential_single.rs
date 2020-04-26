@@ -12,62 +12,13 @@ pub struct SequentialSingle {
 }
 
 pub const BLUES: SequentialSingle = SequentialSingle {
-    three: *colors! {
-        b"deebf7",
-        b"9ecae1",
-        b"3182bd",
-    },
-    four: *colors! {
-        b"eff3ff",
-        b"bdd7e7",
-        b"6baed6",
-        b"2171b5",
-    },
-    five: *colors! {
-        b"eff3ff",
-        b"bdd7e7",
-        b"6baed6",
-        b"3182bd",
-        b"08519c",
-    },
-    six: *colors! {
-        b"eff3ff",
-        b"c6dbef",
-        b"9ecae1",
-        b"6baed6",
-        b"3182bd",
-        b"08519c",
-    },
-    seven: *colors! {
-        b"eff3ff",
-        b"c6dbef",
-        b"9ecae1",
-        b"6baed6",
-        b"4292c6",
-        b"2171b5",
-        b"084594",
-    },
-    eight: *colors! {
-        b"f7fbff",
-        b"deebf7",
-        b"c6dbef",
-        b"9ecae1",
-        b"6baed6",
-        b"4292c6",
-        b"2171b5",
-        b"084594",
-    },
-    nine: *colors! {
-        b"f7fbff",
-        b"deebf7",
-        b"c6dbef",
-        b"9ecae1",
-        b"6baed6",
-        b"4292c6",
-        b"2171b5",
-        b"08519c",
-        b"08306b",
-    },
+    three: colors!(3; b"deebf7 9ecae1 3182bd"),
+    four: colors!(4; b"eff3ff bdd7e7 6baed6 2171b5"),
+    five: colors!(5; b"eff3ff bdd7e7 6baed6 3182bd 08519c"),
+    six: colors!(6; b"eff3ff c6dbef 9ecae1 6baed6 3182bd 08519c"),
+    seven: colors!(7; b"eff3ff c6dbef 9ecae1 6baed6 4292c6 2171b5 084594"),
+    eight: colors!(8; b"f7fbff deebf7 c6dbef 9ecae1 6baed6 4292c6 2171b5 084594"),
+    nine: colors!(9; b"f7fbff deebf7 c6dbef 9ecae1 6baed6 4292c6 2171b5 08519c 08306b"),
 };
 
 pub const GREENS: &[Color; 9] = colors! {

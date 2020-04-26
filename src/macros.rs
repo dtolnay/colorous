@@ -12,10 +12,14 @@ pub(crate) const HEX: [u8; 112] = {
     ]
 };
 
-macro_rules! color {
-    ($hex:literal) => {{
+macro_rules! c {
+    ($h:ident . $i:literal) => {{
+        let o = $i * 7;
+        c!([$h[o], $h[o + 1], $h[o + 2], $h[o + 3], $h[o + 4], $h[o + 5]])
+    }};
+    ($hex:expr) => {{
         use crate::macros::HEX;
-        let [rh, rl, gh, gl, bh, bl] = *$hex;
+        let [rh, rl, gh, gl, bh, bl] = $hex;
         crate::Color {
             r: (HEX[rh as usize] + 1 - 1) * 16 + (HEX[rl as usize] + 1 - 1),
             g: (HEX[gh as usize] + 1 - 1) * 16 + (HEX[gl as usize] + 1 - 1),
@@ -25,7 +29,35 @@ macro_rules! color {
 }
 
 macro_rules! colors {
+    (3; $hex:literal) => {{
+        let h = $hex;
+        [c!(h.0), c!(h.1), c!(h.2)]
+    }};
+    (4; $hex:literal) => {{
+        let h = $hex;
+        [c!(h.0), c!(h.1), c!(h.2), c!(h.3)]
+    }};
+    (5; $hex:literal) => {{
+        let h = $hex;
+        [c!(h.0), c!(h.1), c!(h.2), c!(h.3), c!(h.4)]
+    }};
+    (6; $hex:literal) => {{
+        let h = $hex;
+        [c!(h.0), c!(h.1), c!(h.2), c!(h.3), c!(h.4), c!(h.5)]
+    }};
+    (7; $hex:literal) => {{
+        let h = $hex;
+        [c!(h.0), c!(h.1), c!(h.2), c!(h.3), c!(h.4), c!(h.5), c!(h.6)]
+    }};
+    (8; $hex:literal) => {{
+        let h = $hex;
+        [c!(h.0), c!(h.1), c!(h.2), c!(h.3), c!(h.4), c!(h.5), c!(h.6), c!(h.7)]
+    }};
+    (9; $hex:literal) => {{
+        let h = $hex;
+        [c!(h.0), c!(h.1), c!(h.2), c!(h.3), c!(h.4), c!(h.5), c!(h.6), c!(h.7), c!(h.8)]
+    }};
     ($($hex:literal),* $(,)?) => {
-        &[$(color!($hex)),*]
+        &[$(c!(*$hex)),*]
     };
 }
