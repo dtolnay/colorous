@@ -6,6 +6,8 @@ pub mod diverging;
 pub mod sequential_multi;
 pub mod sequential_single;
 
+mod interpolate;
+
 use std::fmt::{self, Debug, LowerHex, UpperHex};
 
 #[derive(Copy, Clone)]
