@@ -1,6 +1,6 @@
 use crate::Color;
 
-pub const ACCENT: &[Color; 8] = colors! {
+pub const ACCENT: [Color; 8] = colors! {
     b"7fc97f",
     b"beaed4",
     b"fdc086",
@@ -11,7 +11,7 @@ pub const ACCENT: &[Color; 8] = colors! {
     b"666666",
 };
 
-pub const DARK2: &[Color; 8] = colors! {
+pub const DARK2: [Color; 8] = colors! {
     b"1b9e77",
     b"d95f02",
     b"7570b3",
@@ -22,7 +22,7 @@ pub const DARK2: &[Color; 8] = colors! {
     b"666666",
 };
 
-pub const PAIRED: &[Color; 12] = colors! {
+pub const PAIRED: [Color; 12] = colors! {
     b"a6cee3",
     b"1f78b4",
     b"b2df8a",
@@ -37,7 +37,7 @@ pub const PAIRED: &[Color; 12] = colors! {
     b"b15928",
 };
 
-pub const PASTEL1: &[Color; 9] = colors! {
+pub const PASTEL1: [Color; 9] = colors! {
     b"fbb4ae",
     b"b3cde3",
     b"ccebc5",
@@ -49,7 +49,7 @@ pub const PASTEL1: &[Color; 9] = colors! {
     b"f2f2f2",
 };
 
-pub const PASTEL2: &[Color; 8] = colors! {
+pub const PASTEL2: [Color; 8] = colors! {
     b"b3e2cd",
     b"fdcdac",
     b"cbd5e8",
@@ -60,7 +60,7 @@ pub const PASTEL2: &[Color; 8] = colors! {
     b"cccccc",
 };
 
-pub const SET1: &[Color; 9] = colors! {
+pub const SET1: [Color; 9] = colors! {
     b"e41a1c",
     b"377eb8",
     b"4daf4a",
@@ -72,7 +72,7 @@ pub const SET1: &[Color; 9] = colors! {
     b"999999",
 };
 
-pub const SET2: &[Color; 8] = colors! {
+pub const SET2: [Color; 8] = colors! {
     b"66c2a5",
     b"fc8d62",
     b"8da0cb",
@@ -83,7 +83,7 @@ pub const SET2: &[Color; 8] = colors! {
     b"b3b3b3",
 };
 
-pub const SET3: &[Color; 12] = colors! {
+pub const SET3: [Color; 12] = colors! {
     b"8dd3c7",
     b"ffffb3",
     b"bebada",
@@ -98,7 +98,7 @@ pub const SET3: &[Color; 12] = colors! {
     b"ffed6f",
 };
 
-pub const TABLEAU10: &[Color; 10] = colors! {
+pub const TABLEAU10: [Color; 10] = colors! {
     b"4e79a7",
     b"f28e2c",
     b"e15759",
@@ -111,7 +111,7 @@ pub const TABLEAU10: &[Color; 10] = colors! {
     b"bab0ab",
 };
 
-pub const CATEGORY10: &[Color; 10] = colors! {
+pub const CATEGORY10: [Color; 10] = colors! {
     b"1f77b4",
     b"ff7f0e",
     b"2ca02c",
