@@ -3,6 +3,7 @@ use crate::{interpolate, Color, Gradient};
 
 #[derive(Copy, Clone)]
 struct SequentialSingle {
+    name: &'static str,
     three: [Color; 3],
     four: [Color; 4],
     five: [Color; 5],
@@ -13,6 +14,10 @@ struct SequentialSingle {
 }
 
 impl EvalGradient for SequentialSingle {
+    fn name(&self) -> &'static str {
+        self.name
+    }
+
     fn eval_rational(&self, i: usize, n: usize) -> Color {
         match n {
             0 | 1 => self.three[2],
@@ -35,6 +40,7 @@ impl EvalGradient for SequentialSingle {
 
 pub const BLUES: Gradient = Gradient {
     eval: &SequentialSingle {
+        name: "Blues",
         three: colors!(3; b"deebf7 9ecae1 3182bd"),
         four: colors!(4; b"eff3ff bdd7e7 6baed6 2171b5"),
         five: colors!(5; b"eff3ff bdd7e7 6baed6 3182bd 08519c"),
@@ -47,6 +53,7 @@ pub const BLUES: Gradient = Gradient {
 
 pub const GREENS: Gradient = Gradient {
     eval: &SequentialSingle {
+        name: "Greens",
         three: colors!(3; b"e5f5e0 a1d99b 31a354"),
         four: colors!(4; b"edf8e9 bae4b3 74c476 238b45"),
         five: colors!(5; b"edf8e9 bae4b3 74c476 31a354 006d2c"),
@@ -59,6 +66,7 @@ pub const GREENS: Gradient = Gradient {
 
 pub const GREYS: Gradient = Gradient {
     eval: &SequentialSingle {
+        name: "Greys",
         three: colors!(3; b"f0f0f0 bdbdbd 636363"),
         four: colors!(4; b"f7f7f7 cccccc 969696 525252"),
         five: colors!(5; b"f7f7f7 cccccc 969696 636363 252525"),
@@ -71,6 +79,7 @@ pub const GREYS: Gradient = Gradient {
 
 pub const ORANGES: Gradient = Gradient {
     eval: &SequentialSingle {
+        name: "Oranges",
         three: colors!(3; b"fee6ce fdae6b e6550d"),
         four: colors!(4; b"feedde fdbe85 fd8d3c d94701"),
         five: colors!(5; b"feedde fdbe85 fd8d3c e6550d a63603"),
@@ -83,6 +92,7 @@ pub const ORANGES: Gradient = Gradient {
 
 pub const PURPLES: Gradient = Gradient {
     eval: &SequentialSingle {
+        name: "Purples",
         three: colors!(3; b"efedf5 bcbddc 756bb1"),
         four: colors!(4; b"f2f0f7 cbc9e2 9e9ac8 6a51a3"),
         five: colors!(5; b"f2f0f7 cbc9e2 9e9ac8 756bb1 54278f"),
@@ -95,6 +105,7 @@ pub const PURPLES: Gradient = Gradient {
 
 pub const REDS: Gradient = Gradient {
     eval: &SequentialSingle {
+        name: "Reds",
         three: colors!(3; b"fee0d2 fc9272 de2d26"),
         four: colors!(4; b"fee5d9 fcae91 fb6a4a cb181d"),
         five: colors!(5; b"fee5d9 fcae91 fb6a4a de2d26 a50f15"),

@@ -3,6 +3,7 @@ use crate::{interpolate, Color, Gradient};
 
 #[derive(Copy, Clone)]
 struct SequentialMulti {
+    name: &'static str,
     three: [Color; 3],
     four: [Color; 4],
     five: [Color; 5],
@@ -13,6 +14,10 @@ struct SequentialMulti {
 }
 
 impl EvalGradient for SequentialMulti {
+    fn name(&self) -> &'static str {
+        self.name
+    }
+
     fn eval_rational(&self, i: usize, n: usize) -> Color {
         match n {
             0 | 1 => self.three[2],
@@ -35,6 +40,7 @@ impl EvalGradient for SequentialMulti {
 
 pub const BLUE_GREEN: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "BuGn",
         three: colors!(3; b"e5f5f9 99d8c9 2ca25f"),
         four: colors!(4; b"edf8fb b2e2e2 66c2a4 238b45"),
         five: colors!(5; b"edf8fb b2e2e2 66c2a4 2ca25f 006d2c"),
@@ -47,6 +53,7 @@ pub const BLUE_GREEN: Gradient = Gradient {
 
 pub const BLUE_PURPLE: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "BuPu",
         three: colors!(3; b"e0ecf4 9ebcda 8856a7"),
         four: colors!(4; b"edf8fb b3cde3 8c96c6 88419d"),
         five: colors!(5; b"edf8fb b3cde3 8c96c6 8856a7 810f7c"),
@@ -59,6 +66,7 @@ pub const BLUE_PURPLE: Gradient = Gradient {
 
 pub const GREEN_BLUE: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "GnBu",
         three: colors!(3; b"e0f3db a8ddb5 43a2ca"),
         four: colors!(4; b"f0f9e8 bae4bc 7bccc4 2b8cbe"),
         five: colors!(5; b"f0f9e8 bae4bc 7bccc4 43a2ca 0868ac"),
@@ -71,6 +79,7 @@ pub const GREEN_BLUE: Gradient = Gradient {
 
 pub const ORANGE_RED: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "OrRd",
         three: colors!(3; b"fee8c8 fdbb84 e34a33"),
         four: colors!(4; b"fef0d9 fdcc8a fc8d59 d7301f"),
         five: colors!(5; b"fef0d9 fdcc8a fc8d59 e34a33 b30000"),
@@ -83,6 +92,7 @@ pub const ORANGE_RED: Gradient = Gradient {
 
 pub const PURPLE_BLUE_GREEN: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "PuBuGn",
         three: colors!(3; b"ece2f0 a6bddb 1c9099"),
         four: colors!(4; b"f6eff7 bdc9e1 67a9cf 02818a"),
         five: colors!(5; b"f6eff7 bdc9e1 67a9cf 1c9099 016c59"),
@@ -95,6 +105,7 @@ pub const PURPLE_BLUE_GREEN: Gradient = Gradient {
 
 pub const PURPLE_BLUE: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "PuBu",
         three: colors!(3; b"ece7f2 a6bddb 2b8cbe"),
         four: colors!(4; b"f1eef6 bdc9e1 74a9cf 0570b0"),
         five: colors!(5; b"f1eef6 bdc9e1 74a9cf 2b8cbe 045a8d"),
@@ -107,6 +118,7 @@ pub const PURPLE_BLUE: Gradient = Gradient {
 
 pub const PURPLE_RED: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "PuRd",
         three: colors!(3; b"e7e1ef c994c7 dd1c77"),
         four: colors!(4; b"f1eef6 d7b5d8 df65b0 ce1256"),
         five: colors!(5; b"f1eef6 d7b5d8 df65b0 dd1c77 980043"),
@@ -119,6 +131,7 @@ pub const PURPLE_RED: Gradient = Gradient {
 
 pub const RED_PURPLE: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "RdPu",
         three: colors!(3; b"fde0dd fa9fb5 c51b8a"),
         four: colors!(4; b"feebe2 fbb4b9 f768a1 ae017e"),
         five: colors!(5; b"feebe2 fbb4b9 f768a1 c51b8a 7a0177"),
@@ -131,6 +144,7 @@ pub const RED_PURPLE: Gradient = Gradient {
 
 pub const YELLOW_GREEN_BLUE: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "YlGnBu",
         three: colors!(3; b"edf8b1 7fcdbb 2c7fb8"),
         four: colors!(4; b"ffffcc a1dab4 41b6c4 225ea8"),
         five: colors!(5; b"ffffcc a1dab4 41b6c4 2c7fb8 253494"),
@@ -143,6 +157,7 @@ pub const YELLOW_GREEN_BLUE: Gradient = Gradient {
 
 pub const YELLOW_GREEN: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "YlGn",
         three: colors!(3; b"f7fcb9 addd8e 31a354"),
         four: colors!(4; b"ffffcc c2e699 78c679 238443"),
         five: colors!(5; b"ffffcc c2e699 78c679 31a354 006837"),
@@ -155,6 +170,7 @@ pub const YELLOW_GREEN: Gradient = Gradient {
 
 pub const YELLOW_ORANGE_BROWN: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "YlOrBr",
         three: colors!(3; b"fff7bc fec44f d95f0e"),
         four: colors!(4; b"ffffd4 fed98e fe9929 cc4c02"),
         five: colors!(5; b"ffffd4 fed98e fe9929 d95f0e 993404"),
@@ -167,6 +183,7 @@ pub const YELLOW_ORANGE_BROWN: Gradient = Gradient {
 
 pub const YELLOW_ORANGE_RED: Gradient = Gradient {
     eval: &SequentialMulti {
+        name: "YlOrRd",
         three: colors!(3; b"ffeda0 feb24c f03b20"),
         four: colors!(4; b"ffffb2 fecc5c fd8d3c e31a1c"),
         five: colors!(5; b"ffffb2 fecc5c fd8d3c f03b20 bd0026"),

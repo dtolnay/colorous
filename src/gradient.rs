@@ -25,6 +25,8 @@ impl Gradient {
 }
 
 pub(crate) trait EvalGradient {
+    fn name(&self) -> &'static str;
+
     fn eval_rational(&self, i: usize, n: usize) -> Color {
         if n <= 1 {
             self.eval_continuous(1.0)

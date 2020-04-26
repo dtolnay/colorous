@@ -3,6 +3,7 @@ use crate::{interpolate, Color, Gradient};
 
 #[derive(Copy, Clone)]
 struct Diverging {
+    name: &'static str,
     three: [Color; 3],
     four: [Color; 4],
     five: [Color; 5],
@@ -15,6 +16,10 @@ struct Diverging {
 }
 
 impl EvalGradient for Diverging {
+    fn name(&self) -> &'static str {
+        self.name
+    }
+
     fn eval_rational(&self, i: usize, n: usize) -> Color {
         match n {
             0 | 1 => self.three[2],
@@ -39,6 +44,7 @@ impl EvalGradient for Diverging {
 
 pub const BROWN_GREEN: Gradient = Gradient {
     eval: &Diverging {
+        name: "BrBG",
         three: colors!(3; b"d8b365 f5f5f5 5ab4ac"),
         four: colors!(4; b"a6611a dfc27d 80cdc1 018571"),
         five: colors!(5; b"a6611a dfc27d f5f5f5 80cdc1 018571"),
@@ -53,6 +59,7 @@ pub const BROWN_GREEN: Gradient = Gradient {
 
 pub const PURPLE_GREEN: Gradient = Gradient {
     eval: &Diverging {
+        name: "PRGn",
         three: colors!(3; b"af8dc3 f7f7f7 7fbf7b"),
         four: colors!(4; b"7b3294 c2a5cf a6dba0 008837"),
         five: colors!(5; b"7b3294 c2a5cf f7f7f7 a6dba0 008837"),
@@ -67,6 +74,7 @@ pub const PURPLE_GREEN: Gradient = Gradient {
 
 pub const PINK_GREEN: Gradient = Gradient {
     eval: &Diverging {
+        name: "PiYG",
         three: colors!(3; b"e9a3c9 f7f7f7 a1d76a"),
         four: colors!(4; b"d01c8b f1b6da b8e186 4dac26"),
         five: colors!(5; b"d01c8b f1b6da f7f7f7 b8e186 4dac26"),
@@ -81,6 +89,7 @@ pub const PINK_GREEN: Gradient = Gradient {
 
 pub const PURPLE_ORANGE: Gradient = Gradient {
     eval: &Diverging {
+        name: "PuOr",
         three: colors!(3; b"998ec3 f7f7f7 f1a340"),
         four: colors!(4; b"5e3c99 b2abd2 fdb863 e66101"),
         five: colors!(5; b"5e3c99 b2abd2 f7f7f7 fdb863 e66101"),
@@ -95,6 +104,7 @@ pub const PURPLE_ORANGE: Gradient = Gradient {
 
 pub const RED_BLUE: Gradient = Gradient {
     eval: &Diverging {
+        name: "RdBu",
         three: colors!(3; b"ef8a62 f7f7f7 67a9cf"),
         four: colors!(4; b"ca0020 f4a582 92c5de 0571b0"),
         five: colors!(5; b"ca0020 f4a582 f7f7f7 92c5de 0571b0"),
@@ -109,6 +119,7 @@ pub const RED_BLUE: Gradient = Gradient {
 
 pub const RED_GRAY: Gradient = Gradient {
     eval: &Diverging {
+        name: "RdGy",
         three: colors!(3; b"ef8a62 ffffff 999999"),
         four: colors!(4; b"ca0020 f4a582 bababa 404040"),
         five: colors!(5; b"ca0020 f4a582 ffffff bababa 404040"),
@@ -123,6 +134,7 @@ pub const RED_GRAY: Gradient = Gradient {
 
 pub const RED_YELLOW_BLUE: Gradient = Gradient {
     eval: &Diverging {
+        name: "RdYlBu",
         three: colors!(3; b"fc8d59 ffffbf 91bfdb"),
         four: colors!(4; b"d7191c fdae61 abd9e9 2c7bb6"),
         five: colors!(5; b"d7191c fdae61 ffffbf abd9e9 2c7bb6"),
@@ -137,6 +149,7 @@ pub const RED_YELLOW_BLUE: Gradient = Gradient {
 
 pub const RED_YELLOW_GREEN: Gradient = Gradient {
     eval: &Diverging {
+        name: "RdYlGn",
         three: colors!(3; b"fc8d59 ffffbf 91cf60"),
         four: colors!(4; b"d7191c fdae61 a6d96a 1a9641"),
         five: colors!(5; b"d7191c fdae61 ffffbf a6d96a 1a9641"),
@@ -151,6 +164,7 @@ pub const RED_YELLOW_GREEN: Gradient = Gradient {
 
 pub const SPECTRAL: Gradient = Gradient {
     eval: &Diverging {
+        name: "Spectral",
         three: colors!(3; b"fc8d59 ffffbf 99d594"),
         four: colors!(4; b"d7191c fdae61 abdda4 2b83ba"),
         five: colors!(5; b"d7191c fdae61 ffffbf abdda4 2b83ba"),
