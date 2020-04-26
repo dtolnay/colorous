@@ -117,7 +117,7 @@ pub const RED_BLUE: Gradient = Gradient {
     },
 };
 
-pub const RED_GRAY: Gradient = Gradient {
+pub const RED_GREY: Gradient = Gradient {
     eval: &Diverging {
         name: "RdGy",
         three: colors!(3; b"ef8a62 ffffff 999999"),
