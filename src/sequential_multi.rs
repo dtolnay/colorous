@@ -1,3 +1,4 @@
+use crate::cubehelix::{self, Cubehelix};
 use crate::gradient::EvalGradient;
 use crate::{interpolate, Color, Gradient};
 
@@ -221,6 +222,30 @@ impl EvalGradient for Cividis {
             .max(0.0)
             .min(255.0) as u8;
         Color { r, g, b }
+    }
+}
+
+pub const WARM: Gradient = Gradient { eval: &Warm };
+
+struct Warm;
+
+impl EvalGradient for Warm {
+    fn name(&self) -> &'static str {
+        "Warm"
+    }
+
+    fn eval_continuous(&self, t: f64) -> Color {
+        let start = Cubehelix {
+            h: -100.0,
+            s: 0.75,
+            l: 0.35,
+        };
+        let end = Cubehelix {
+            h: 80.0,
+            s: 1.5,
+            l: 0.8,
+        };
+        cubehelix::interpolate(start, end, t).into()
     }
 }
 
