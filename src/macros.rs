@@ -14,16 +14,12 @@ pub(crate) const HEX: [u8; 112] = {
 
 macro_rules! c {
     ($h:ident . $i:literal) => {{
-        let o = $i * 7;
-        c!([$h[o], $h[o + 1], $h[o + 2], $h[o + 3], $h[o + 4], $h[o + 5]])
-    }};
-    ($hex:expr) => {{
         let hex = crate::macros::HEX;
-        let [rh, rl, gh, gl, bh, bl] = $hex;
+        let o = $i * 7;
         crate::Color {
-            r: hex[rh as usize] * 16 + hex[rl as usize],
-            g: hex[gh as usize] * 16 + hex[gl as usize],
-            b: hex[bh as usize] * 16 + hex[bl as usize],
+            r: hex[$h[o] as usize] * 16 + hex[$h[o + 1] as usize],
+            g: hex[$h[o + 2] as usize] * 16 + hex[$h[o + 3] as usize],
+            b: hex[$h[o + 4] as usize] * 16 + hex[$h[o + 5] as usize],
         }
     }};
 }
