@@ -18,12 +18,12 @@ macro_rules! c {
         c!([$h[o], $h[o + 1], $h[o + 2], $h[o + 3], $h[o + 4], $h[o + 5]])
     }};
     ($hex:expr) => {{
-        use crate::macros::HEX;
+        let hex = crate::macros::HEX;
         let [rh, rl, gh, gl, bh, bl] = $hex;
         crate::Color {
-            r: HEX[rh as usize] * 16 + HEX[rl as usize],
-            g: HEX[gh as usize] * 16 + HEX[gl as usize],
-            b: HEX[bh as usize] * 16 + HEX[bl as usize],
+            r: hex[rh as usize] * 16 + hex[rl as usize],
+            g: hex[gh as usize] * 16 + hex[gl as usize],
+            b: hex[bh as usize] * 16 + hex[bl as usize],
         }
     }};
 }
