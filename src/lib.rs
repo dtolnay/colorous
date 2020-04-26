@@ -1,6 +1,8 @@
 #[macro_use]
 mod macros;
 
+pub mod categorical;
+
 use std::fmt::{self, LowerHex, UpperHex};
 
 #[derive(Copy, Clone, Debug)]
