@@ -1,5 +1,6 @@
 use crate::color::Color;
 use std::cmp;
+use std::fmt::{self, Debug};
 
 #[derive(Copy, Clone)]
 pub struct Gradient {
@@ -36,4 +37,10 @@ pub(crate) trait EvalGradient {
     }
 
     fn eval_continuous(&self, t: f64) -> Color;
+}
+
+impl Debug for Gradient {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "Gradient({})", self.eval.name())
+    }
 }
