@@ -28,6 +28,7 @@ macro_rules! c {
     }};
 }
 
+#[rustfmt::skip]
 macro_rules! colors {
     (3; $hex:literal) => {{
         let h = $hex;
