@@ -3,7 +3,7 @@
 use crate::cubehelix::Cubehelix;
 use crate::gradient::EvalGradient;
 use crate::{Color, Gradient};
-use std::f64::consts as f64;
+use std::f32::consts as f32;
 
 /// &#8203;
 ///
@@ -21,7 +21,7 @@ impl EvalGradient for Rainbow {
         eval_rational(self, i, n)
     }
 
-    fn eval_continuous(&self, t: f64) -> Color {
+    fn eval_continuous(&self, t: f32) -> Color {
         let ts = (t - 0.5).abs();
         let h = 360.0 * t - 100.0;
         let s = 1.5 - 1.5 * ts;
@@ -46,13 +46,13 @@ impl EvalGradient for Sinebow {
         eval_rational(self, i, n)
     }
 
-    fn eval_continuous(&self, t: f64) -> Color {
-        let t = (0.5 - t) * f64::PI;
+    fn eval_continuous(&self, t: f32) -> Color {
+        let t = (0.5 - t) * f32::PI;
         let x = t.sin();
         let r = (255.0 * x * x) as u8;
-        let x = (t + f64::FRAC_PI_3).sin();
+        let x = (t + f32::FRAC_PI_3).sin();
         let g = (255.0 * x * x) as u8;
-        let x = (t + 2.0 * f64::FRAC_PI_3).sin();
+        let x = (t + 2.0 * f32::FRAC_PI_3).sin();
         let b = (255.0 * x * x) as u8;
         Color { r, g, b }
     }
@@ -63,5 +63,5 @@ impl EvalGradient for Sinebow {
 // gradient. For cyclical gradients the very first and very last color are the
 // same, so we want a different behavior.
 fn eval_rational(cyclic_gradient: &dyn EvalGradient, i: usize, n: usize) -> Color {
-    cyclic_gradient.eval_continuous(i as f64 / n as f64)
+    cyclic_gradient.eval_continuous(i as f32 / n as f32)
 }

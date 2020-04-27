@@ -20,7 +20,7 @@ impl Gradient {
     /// Samples the gradient at position `t`. Requires `0.0 ≤ t ≤ 1.0`.
     pub fn eval_continuous(&self, t: f64) -> Color {
         let t = t.max(0.0).min(1.0);
-        self.eval.eval_continuous(t)
+        self.eval.eval_continuous(t as f32)
     }
 }
 
@@ -31,11 +31,11 @@ pub(crate) trait EvalGradient {
         if n <= 1 {
             self.eval_continuous(1.0)
         } else {
-            self.eval_continuous(i as f64 / (n - 1) as f64)
+            self.eval_continuous(i as f32 / (n - 1) as f32)
         }
     }
 
-    fn eval_continuous(&self, t: f64) -> Color;
+    fn eval_continuous(&self, t: f32) -> Color;
 }
 
 impl Debug for Gradient {

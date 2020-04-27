@@ -33,11 +33,11 @@ impl EvalGradient for Diverging {
             9 => self.nine[i],
             10 => self.ten[i],
             11 => self.eleven[i],
-            _ => self.eval_continuous(i as f64 / (n - 1) as f64),
+            _ => self.eval_continuous(i as f32 / (n - 1) as f32),
         }
     }
 
-    fn eval_continuous(&self, t: f64) -> Color {
+    fn eval_continuous(&self, t: f32) -> Color {
         interpolate::spline(&self.eleven, t)
     }
 }
