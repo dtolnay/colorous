@@ -15,7 +15,7 @@ impl EvalGradient for Turbo {
         "Turbo"
     }
 
-    fn eval_continuous(&self, t: f64) -> Color {
+    fn eval_continuous(&self, t: f32) -> Color {
         let r = (34.61
             + t * (1172.33 - t * (10793.56 - t * (33300.12 - t * (38394.49 - t * 14825.05)))))
             .max(0.0)
@@ -41,7 +41,7 @@ impl EvalGradient for Ramp {
         self.name
     }
 
-    fn eval_continuous(&self, t: f64) -> Color {
+    fn eval_continuous(&self, t: f32) -> Color {
         interpolate::spline(&self.colors, t)
     }
 }
@@ -230,7 +230,7 @@ impl EvalGradient for Cividis {
         "Cividis"
     }
 
-    fn eval_continuous(&self, t: f64) -> Color {
+    fn eval_continuous(&self, t: f32) -> Color {
         let r = (-4.54 - t * (35.34 - t * (2381.73 - t * (6402.7 - t * (7024.72 - t * 2710.57)))))
             .max(0.0)
             .min(255.0) as u8;
@@ -255,7 +255,7 @@ impl EvalGradient for InterpolateCubehelix {
         self.name
     }
 
-    fn eval_continuous(&self, t: f64) -> Color {
+    fn eval_continuous(&self, t: f32) -> Color {
         cubehelix::interpolate(self.start, self.end, t).into()
     }
 }

@@ -1,18 +1,18 @@
 #![allow(clippy::many_single_char_names)]
 
 use crate::Color;
-use std::f64::consts as f64;
+use std::f32::consts as f32;
 
 #[derive(Copy, Clone)]
 pub(crate) struct Cubehelix {
-    pub h: f64,
-    pub s: f64,
-    pub l: f64,
+    pub h: f32,
+    pub s: f32,
+    pub l: f32,
 }
 
 impl From<Cubehelix> for Color {
     fn from(c: Cubehelix) -> Color {
-        const DEG2RAD: f64 = f64::PI / 180.0;
+        const DEG2RAD: f32 = f32::PI / 180.0;
         let h = (c.h + 120.0) * DEG2RAD;
         let l = c.l;
         let a = c.s * l * (1.0 - l);
@@ -25,7 +25,7 @@ impl From<Cubehelix> for Color {
     }
 }
 
-pub(crate) fn interpolate(start: Cubehelix, end: Cubehelix, t: f64) -> Cubehelix {
+pub(crate) fn interpolate(start: Cubehelix, end: Cubehelix, t: f32) -> Cubehelix {
     Cubehelix {
         h: start.h + t * (end.h - start.h),
         s: start.s + t * (end.s - start.s),
