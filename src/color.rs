@@ -1,5 +1,13 @@
 use std::fmt::{self, Debug, LowerHex, UpperHex};
 
+/// &#8203;
+///
+/// `Color` has public fields `r`, `g`, `b` of type `u8` which you can read
+/// directly, or alternatively you may use the LowerHex and UpperHex impls to
+/// format it as a hex color string.
+///
+/// - `format!("#{:x}", color)`&ensp;&#10230;&ensp;`#f0f0f0`
+/// - `format!("#{:X}", color)`&ensp;&#10230;&ensp;`#F0F0F0`
 #[derive(Copy, Clone)]
 pub struct Color {
     pub r: u8,
