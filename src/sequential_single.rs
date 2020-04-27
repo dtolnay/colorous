@@ -38,6 +38,7 @@ impl EvalGradient for SequentialSingle {
     }
 }
 
+/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Blues.png" width="100%" height="40" alt="Blues">
 pub const BLUES: Gradient = Gradient {
     eval: &SequentialSingle {
         name: "Blues",
@@ -51,6 +52,7 @@ pub const BLUES: Gradient = Gradient {
     },
 };
 
+/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Greens.png" width="100%" height="40" alt="Greens">
 pub const GREENS: Gradient = Gradient {
     eval: &SequentialSingle {
         name: "Greens",
@@ -64,6 +66,7 @@ pub const GREENS: Gradient = Gradient {
     },
 };
 
+/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Greys.png" width="100%" height="40" alt="Greys">
 pub const GREYS: Gradient = Gradient {
     eval: &SequentialSingle {
         name: "Greys",
@@ -77,6 +80,7 @@ pub const GREYS: Gradient = Gradient {
     },
 };
 
+/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Oranges.png" width="100%" height="40" alt="Oranges">
 pub const ORANGES: Gradient = Gradient {
     eval: &SequentialSingle {
         name: "Oranges",
@@ -90,6 +94,7 @@ pub const ORANGES: Gradient = Gradient {
     },
 };
 
+/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Purples.png" width="100%" height="40" alt="Purples">
 pub const PURPLES: Gradient = Gradient {
     eval: &SequentialSingle {
         name: "Purples",
@@ -103,6 +108,7 @@ pub const PURPLES: Gradient = Gradient {
     },
 };
 
+/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Reds.png" width="100%" height="40" alt="Reds">
 pub const REDS: Gradient = Gradient {
     eval: &SequentialSingle {
         name: "Reds",
