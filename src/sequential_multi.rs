@@ -1,5 +1,6 @@
 use crate::cubehelix::{self, Cubehelix};
 use crate::gradient::EvalGradient;
+use crate::sequential::Sequential;
 use crate::{interpolate, Color, Gradient};
 
 /// &#8203;
@@ -316,48 +317,11 @@ pub const CUBEHELIX: Gradient = Gradient {
     },
 };
 
-#[derive(Copy, Clone)]
-struct SequentialMulti {
-    name: &'static str,
-    three: [Color; 3],
-    four: [Color; 4],
-    five: [Color; 5],
-    six: [Color; 6],
-    seven: [Color; 7],
-    eight: [Color; 8],
-    nine: [Color; 9],
-}
-
-impl EvalGradient for SequentialMulti {
-    fn name(&self) -> &'static str {
-        self.name
-    }
-
-    fn eval_rational(&self, i: usize, n: usize) -> Color {
-        match n {
-            0 | 1 => self.three[2],
-            2 => self.three[i * 2],
-            3 => self.three[i],
-            4 => self.four[i],
-            5 => self.five[i],
-            6 => self.six[i],
-            7 => self.seven[i],
-            8 => self.eight[i],
-            9 => self.nine[i],
-            _ => self.eval_continuous(i as f64 / (n - 1) as f64),
-        }
-    }
-
-    fn eval_continuous(&self, t: f64) -> Color {
-        interpolate::spline(&self.nine, t)
-    }
-}
-
 /// &#8203;
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/BuGn.png" width="100%" height="40" alt="BuGn">
 pub const BLUE_GREEN: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "BuGn",
         three: colors!(0xe5f5f9 0x99d8c9 0x2ca25f),
         four: colors!(0xedf8fb 0xb2e2e2 0x66c2a4 0x238b45),
@@ -373,7 +337,7 @@ pub const BLUE_GREEN: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/BuPu.png" width="100%" height="40" alt="BuPu">
 pub const BLUE_PURPLE: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "BuPu",
         three: colors!(0xe0ecf4 0x9ebcda 0x8856a7),
         four: colors!(0xedf8fb 0xb3cde3 0x8c96c6 0x88419d),
@@ -389,7 +353,7 @@ pub const BLUE_PURPLE: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/GnBu.png" width="100%" height="40" alt="GnBu">
 pub const GREEN_BLUE: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "GnBu",
         three: colors!(0xe0f3db 0xa8ddb5 0x43a2ca),
         four: colors!(0xf0f9e8 0xbae4bc 0x7bccc4 0x2b8cbe),
@@ -405,7 +369,7 @@ pub const GREEN_BLUE: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/OrRd.png" width="100%" height="40" alt="OrRd">
 pub const ORANGE_RED: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "OrRd",
         three: colors!(0xfee8c8 0xfdbb84 0xe34a33),
         four: colors!(0xfef0d9 0xfdcc8a 0xfc8d59 0xd7301f),
@@ -421,7 +385,7 @@ pub const ORANGE_RED: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/PuBuGn.png" width="100%" height="40" alt="PuBuGn">
 pub const PURPLE_BLUE_GREEN: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "PuBuGn",
         three: colors!(0xece2f0 0xa6bddb 0x1c9099),
         four: colors!(0xf6eff7 0xbdc9e1 0x67a9cf 0x02818a),
@@ -437,7 +401,7 @@ pub const PURPLE_BLUE_GREEN: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/PuBu.png" width="100%" height="40" alt="PuBu">
 pub const PURPLE_BLUE: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "PuBu",
         three: colors!(0xece7f2 0xa6bddb 0x2b8cbe),
         four: colors!(0xf1eef6 0xbdc9e1 0x74a9cf 0x0570b0),
@@ -453,7 +417,7 @@ pub const PURPLE_BLUE: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/PuRd.png" width="100%" height="40" alt="PuRd">
 pub const PURPLE_RED: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "PuRd",
         three: colors!(0xe7e1ef 0xc994c7 0xdd1c77),
         four: colors!(0xf1eef6 0xd7b5d8 0xdf65b0 0xce1256),
@@ -469,7 +433,7 @@ pub const PURPLE_RED: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/RdPu.png" width="100%" height="40" alt="RdPu">
 pub const RED_PURPLE: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "RdPu",
         three: colors!(0xfde0dd 0xfa9fb5 0xc51b8a),
         four: colors!(0xfeebe2 0xfbb4b9 0xf768a1 0xae017e),
@@ -485,7 +449,7 @@ pub const RED_PURPLE: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/YlGnBu.png" width="100%" height="40" alt="YlGnBu">
 pub const YELLOW_GREEN_BLUE: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "YlGnBu",
         three: colors!(0xedf8b1 0x7fcdbb 0x2c7fb8),
         four: colors!(0xffffcc 0xa1dab4 0x41b6c4 0x225ea8),
@@ -501,7 +465,7 @@ pub const YELLOW_GREEN_BLUE: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/YlGn.png" width="100%" height="40" alt="YlGn">
 pub const YELLOW_GREEN: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "YlGn",
         three: colors!(0xf7fcb9 0xaddd8e 0x31a354),
         four: colors!(0xffffcc 0xc2e699 0x78c679 0x238443),
@@ -517,7 +481,7 @@ pub const YELLOW_GREEN: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/YlOrBr.png" width="100%" height="40" alt="YlOrBr">
 pub const YELLOW_ORANGE_BROWN: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "YlOrBr",
         three: colors!(0xfff7bc 0xfec44f 0xd95f0e),
         four: colors!(0xffffd4 0xfed98e 0xfe9929 0xcc4c02),
@@ -533,7 +497,7 @@ pub const YELLOW_ORANGE_BROWN: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/YlOrRd.png" width="100%" height="40" alt="YlOrRd">
 pub const YELLOW_ORANGE_RED: Gradient = Gradient {
-    eval: &SequentialMulti {
+    eval: &Sequential {
         name: "YlOrRd",
         three: colors!(0xffeda0 0xfeb24c 0xf03b20),
         four: colors!(0xffffb2 0xfecc5c 0xfd8d3c 0xe31a1c),

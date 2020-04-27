@@ -274,6 +274,7 @@ mod cyclical;
 mod diverging;
 mod gradient;
 mod interpolate;
+mod sequential;
 mod sequential_multi;
 mod sequential_single;
 

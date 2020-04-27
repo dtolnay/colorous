@@ -1,48 +1,11 @@
-use crate::gradient::EvalGradient;
-use crate::{interpolate, Color, Gradient};
-
-#[derive(Copy, Clone)]
-struct SequentialSingle {
-    name: &'static str,
-    three: [Color; 3],
-    four: [Color; 4],
-    five: [Color; 5],
-    six: [Color; 6],
-    seven: [Color; 7],
-    eight: [Color; 8],
-    nine: [Color; 9],
-}
-
-impl EvalGradient for SequentialSingle {
-    fn name(&self) -> &'static str {
-        self.name
-    }
-
-    fn eval_rational(&self, i: usize, n: usize) -> Color {
-        match n {
-            0 | 1 => self.three[2],
-            2 => self.three[i * 2],
-            3 => self.three[i],
-            4 => self.four[i],
-            5 => self.five[i],
-            6 => self.six[i],
-            7 => self.seven[i],
-            8 => self.eight[i],
-            9 => self.nine[i],
-            _ => self.eval_continuous(i as f64 / (n - 1) as f64),
-        }
-    }
-
-    fn eval_continuous(&self, t: f64) -> Color {
-        interpolate::spline(&self.nine, t)
-    }
-}
+use crate::sequential::Sequential;
+use crate::Gradient;
 
 /// &#8203;
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Blues.png" width="100%" height="40" alt="Blues">
 pub const BLUES: Gradient = Gradient {
-    eval: &SequentialSingle {
+    eval: &Sequential {
         name: "Blues",
         three: colors!(0xdeebf7 0x9ecae1 0x3182bd),
         four: colors!(0xeff3ff 0xbdd7e7 0x6baed6 0x2171b5),
@@ -58,7 +21,7 @@ pub const BLUES: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Greens.png" width="100%" height="40" alt="Greens">
 pub const GREENS: Gradient = Gradient {
-    eval: &SequentialSingle {
+    eval: &Sequential {
         name: "Greens",
         three: colors!(0xe5f5e0 0xa1d99b 0x31a354),
         four: colors!(0xedf8e9 0xbae4b3 0x74c476 0x238b45),
@@ -74,7 +37,7 @@ pub const GREENS: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Greys.png" width="100%" height="40" alt="Greys">
 pub const GREYS: Gradient = Gradient {
-    eval: &SequentialSingle {
+    eval: &Sequential {
         name: "Greys",
         three: colors!(0xf0f0f0 0xbdbdbd 0x636363),
         four: colors!(0xf7f7f7 0xcccccc 0x969696 0x525252),
@@ -90,7 +53,7 @@ pub const GREYS: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Oranges.png" width="100%" height="40" alt="Oranges">
 pub const ORANGES: Gradient = Gradient {
-    eval: &SequentialSingle {
+    eval: &Sequential {
         name: "Oranges",
         three: colors!(0xfee6ce 0xfdae6b 0xe6550d),
         four: colors!(0xfeedde 0xfdbe85 0xfd8d3c 0xd94701),
@@ -106,7 +69,7 @@ pub const ORANGES: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Purples.png" width="100%" height="40" alt="Purples">
 pub const PURPLES: Gradient = Gradient {
-    eval: &SequentialSingle {
+    eval: &Sequential {
         name: "Purples",
         three: colors!(0xefedf5 0xbcbddc 0x756bb1),
         four: colors!(0xf2f0f7 0xcbc9e2 0x9e9ac8 0x6a51a3),
@@ -122,7 +85,7 @@ pub const PURPLES: Gradient = Gradient {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Reds.png" width="100%" height="40" alt="Reds">
 pub const REDS: Gradient = Gradient {
-    eval: &SequentialSingle {
+    eval: &Sequential {
         name: "Reds",
         three: colors!(0xfee0d2 0xfc9272 0xde2d26),
         four: colors!(0xfee5d9 0xfcae91 0xfb6a4a 0xcb181d),
