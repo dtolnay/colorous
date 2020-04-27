@@ -62,9 +62,9 @@ const CATEGORICALS: [&[Color]; 10] = [
 
 fn main() {
     let rows = GRADIENTS.len() + CATEGORICALS.len();
-    let margin = 1;
-    let grid = 40;
-    let width = 900;
+    let margin = 2;
+    let grid = 80;
+    let width = 1800;
     let height = rows * grid - margin;
     let mut imgbuf = ImageBuffer::new(width as u32, height as u32);
 
@@ -82,7 +82,7 @@ fn main() {
             }
         } else if let Some(scheme) = CATEGORICALS.get(row - GRADIENTS.len()) {
             if col >= scheme.len() {
-                let ch = (10 + (x + y) / 10 % 2 * 15) as u8;
+                let ch = ((x + y) / 20 % 2 * 15) as u8 + 10;
                 image::Rgb([ch, ch, ch])
             } else if border {
                 image::Rgb([0, 0, 0])
@@ -93,6 +93,21 @@ fn main() {
         } else {
             image::Rgb([0, 0, 0])
         };
+    }
+
+    let dejavu = dejavu::sans::regular();
+    let font = rusttype::Font::from_bytes(dejavu).unwrap();
+
+    for (i, gradient) in GRADIENTS.iter().enumerate() {
+        imageproc::drawing::draw_text_mut(
+            &mut imgbuf,
+            image::Rgb([0, 0, 0]),
+            10,
+            (i * grid + 10) as u32,
+            rusttype::Scale::uniform(24.0),
+            &font,
+            gradient.name(),
+        );
     }
 
     if let Err(err) = imgbuf.save("colorous.png") {
