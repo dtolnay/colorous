@@ -33,7 +33,7 @@ impl EvalGradient for Turbo {
 
 struct Ramp {
     name: &'static str,
-    colors: &'static [Color],
+    colors: [Color; 256],
 }
 
 impl EvalGradient for Ramp {
@@ -52,7 +52,7 @@ impl EvalGradient for Ramp {
 pub const VIRIDIS: Gradient = Gradient {
     eval: &Ramp {
         name: "Viridis",
-        colors: &colors! {
+        colors: colors! {
             0x440154 0x440256 0x450457 0x450559 0x46075a 0x46085c 0x460a5d 0x460b5e
             0x470d60 0x470e61 0x471063 0x471164 0x471365 0x481467 0x481668 0x481769
             0x48186a 0x481a6c 0x481b6d 0x481c6e 0x481d6f 0x481f70 0x482071 0x482173
@@ -95,7 +95,7 @@ pub const VIRIDIS: Gradient = Gradient {
 pub const INFERNO: Gradient = Gradient {
     eval: &Ramp {
         name: "Inferno",
-        colors: &colors! {
+        colors: colors! {
             0x000004 0x010005 0x010106 0x010108 0x02010a 0x02020c 0x02020e 0x030210
             0x040312 0x040314 0x050417 0x060419 0x07051b 0x08051d 0x09061f 0x0a0722
             0x0b0724 0x0c0826 0x0d0829 0x0e092b 0x10092d 0x110a30 0x120a32 0x140b34
@@ -138,7 +138,7 @@ pub const INFERNO: Gradient = Gradient {
 pub const MAGMA: Gradient = Gradient {
     eval: &Ramp {
         name: "Magma",
-        colors: &colors! {
+        colors: colors! {
             0x000004 0x010005 0x010106 0x010108 0x020109 0x02020b 0x02020d 0x03030f
             0x030312 0x040414 0x050416 0x060518 0x06051a 0x07061c 0x08071e 0x090720
             0x0a0822 0x0b0924 0x0c0926 0x0d0a29 0x0e0b2b 0x100b2d 0x110c2f 0x120d31
@@ -181,7 +181,7 @@ pub const MAGMA: Gradient = Gradient {
 pub const PLASMA: Gradient = Gradient {
     eval: &Ramp {
         name: "Plasma",
-        colors: &colors! {
+        colors: colors! {
             0x0d0887 0x100788 0x130789 0x16078a 0x19068c 0x1b068d 0x1d068e 0x20068f
             0x220690 0x240691 0x260591 0x280592 0x2a0593 0x2c0594 0x2e0595 0x2f0596
             0x310597 0x330597 0x350498 0x370499 0x38049a 0x3a049a 0x3c049b 0x3e049c
