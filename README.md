@@ -219,7 +219,7 @@ The “sinebow” color scheme by [Jim Bumgardner](https://krazydad.com/tutorial
 
 ## Categorical
 
-Categorical color schemes are represented simply as an array `[Color; N]`.
+Categorical color schemes are exposed simply as an array `[Color; N]`.
 
 <a href="#Category10" name="Category10">#</a> colorous::<b>CATEGORY10</b>
 
