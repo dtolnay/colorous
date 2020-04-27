@@ -5,7 +5,7 @@ use crate::{interpolate, Color, Gradient};
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/turbo.png" width="100%" height="40" alt="turbo">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/turbo.png" width="100%" height="40" alt="turbo">
 pub const TURBO: Gradient = Gradient { eval: &Turbo };
 
 struct Turbo;
@@ -48,7 +48,7 @@ impl EvalGradient for Ramp {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/viridis.png" width="100%" height="40" alt="viridis">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/viridis.png" width="100%" height="40" alt="viridis">
 pub const VIRIDIS: Gradient = Gradient {
     eval: &Ramp {
         name: "Viridis",
@@ -91,7 +91,7 @@ pub const VIRIDIS: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/inferno.png" width="100%" height="40" alt="inferno">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/inferno.png" width="100%" height="40" alt="inferno">
 pub const INFERNO: Gradient = Gradient {
     eval: &Ramp {
         name: "Inferno",
@@ -134,7 +134,7 @@ pub const INFERNO: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/magma.png" width="100%" height="40" alt="magma">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/magma.png" width="100%" height="40" alt="magma">
 pub const MAGMA: Gradient = Gradient {
     eval: &Ramp {
         name: "Magma",
@@ -177,7 +177,7 @@ pub const MAGMA: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/plasma.png" width="100%" height="40" alt="plasma">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/plasma.png" width="100%" height="40" alt="plasma">
 pub const PLASMA: Gradient = Gradient {
     eval: &Ramp {
         name: "Plasma",
@@ -220,7 +220,7 @@ pub const PLASMA: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/cividis.png" width="100%" height="40" alt="cividis">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/cividis.png" width="100%" height="40" alt="cividis">
 pub const CIVIDIS: Gradient = Gradient { eval: &Cividis };
 
 struct Cividis;
@@ -262,7 +262,7 @@ impl EvalGradient for InterpolateCubehelix {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/warm.png" width="100%" height="40" alt="warm">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/warm.png" width="100%" height="40" alt="warm">
 pub const WARM: Gradient = Gradient {
     eval: &InterpolateCubehelix {
         name: "Warm",
@@ -281,7 +281,7 @@ pub const WARM: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/cool.png" width="100%" height="40" alt="cool">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/cool.png" width="100%" height="40" alt="cool">
 pub const COOL: Gradient = Gradient {
     eval: &InterpolateCubehelix {
         name: "Cool",
@@ -300,7 +300,7 @@ pub const COOL: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/cubehelix.png" width="100%" height="40" alt="cubehelix">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/cubehelix.png" width="100%" height="40" alt="cubehelix">
 pub const CUBEHELIX: Gradient = Gradient {
     eval: &InterpolateCubehelix {
         name: "Cubehelix",
@@ -319,7 +319,7 @@ pub const CUBEHELIX: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/BuGn.png" width="100%" height="40" alt="BuGn">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/BuGn.png" width="100%" height="40" alt="BuGn">
 pub const BLUE_GREEN: Gradient = Gradient {
     eval: &Sequential {
         name: "BuGn",
@@ -335,7 +335,7 @@ pub const BLUE_GREEN: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/BuPu.png" width="100%" height="40" alt="BuPu">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/BuPu.png" width="100%" height="40" alt="BuPu">
 pub const BLUE_PURPLE: Gradient = Gradient {
     eval: &Sequential {
         name: "BuPu",
@@ -351,7 +351,7 @@ pub const BLUE_PURPLE: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/GnBu.png" width="100%" height="40" alt="GnBu">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/GnBu.png" width="100%" height="40" alt="GnBu">
 pub const GREEN_BLUE: Gradient = Gradient {
     eval: &Sequential {
         name: "GnBu",
@@ -367,7 +367,7 @@ pub const GREEN_BLUE: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/OrRd.png" width="100%" height="40" alt="OrRd">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/OrRd.png" width="100%" height="40" alt="OrRd">
 pub const ORANGE_RED: Gradient = Gradient {
     eval: &Sequential {
         name: "OrRd",
@@ -383,7 +383,7 @@ pub const ORANGE_RED: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/PuBuGn.png" width="100%" height="40" alt="PuBuGn">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/PuBuGn.png" width="100%" height="40" alt="PuBuGn">
 pub const PURPLE_BLUE_GREEN: Gradient = Gradient {
     eval: &Sequential {
         name: "PuBuGn",
@@ -399,7 +399,7 @@ pub const PURPLE_BLUE_GREEN: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/PuBu.png" width="100%" height="40" alt="PuBu">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/PuBu.png" width="100%" height="40" alt="PuBu">
 pub const PURPLE_BLUE: Gradient = Gradient {
     eval: &Sequential {
         name: "PuBu",
@@ -415,7 +415,7 @@ pub const PURPLE_BLUE: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/PuRd.png" width="100%" height="40" alt="PuRd">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/PuRd.png" width="100%" height="40" alt="PuRd">
 pub const PURPLE_RED: Gradient = Gradient {
     eval: &Sequential {
         name: "PuRd",
@@ -431,7 +431,7 @@ pub const PURPLE_RED: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/RdPu.png" width="100%" height="40" alt="RdPu">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/RdPu.png" width="100%" height="40" alt="RdPu">
 pub const RED_PURPLE: Gradient = Gradient {
     eval: &Sequential {
         name: "RdPu",
@@ -447,7 +447,7 @@ pub const RED_PURPLE: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/YlGnBu.png" width="100%" height="40" alt="YlGnBu">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/YlGnBu.png" width="100%" height="40" alt="YlGnBu">
 pub const YELLOW_GREEN_BLUE: Gradient = Gradient {
     eval: &Sequential {
         name: "YlGnBu",
@@ -463,7 +463,7 @@ pub const YELLOW_GREEN_BLUE: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/YlGn.png" width="100%" height="40" alt="YlGn">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/YlGn.png" width="100%" height="40" alt="YlGn">
 pub const YELLOW_GREEN: Gradient = Gradient {
     eval: &Sequential {
         name: "YlGn",
@@ -479,7 +479,7 @@ pub const YELLOW_GREEN: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/YlOrBr.png" width="100%" height="40" alt="YlOrBr">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/YlOrBr.png" width="100%" height="40" alt="YlOrBr">
 pub const YELLOW_ORANGE_BROWN: Gradient = Gradient {
     eval: &Sequential {
         name: "YlOrBr",
@@ -495,7 +495,7 @@ pub const YELLOW_ORANGE_BROWN: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/YlOrRd.png" width="100%" height="40" alt="YlOrRd">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/YlOrRd.png" width="100%" height="40" alt="YlOrRd">
 pub const YELLOW_ORANGE_RED: Gradient = Gradient {
     eval: &Sequential {
         name: "YlOrRd",

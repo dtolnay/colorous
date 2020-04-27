@@ -3,7 +3,7 @@ use crate::Gradient;
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Blues.png" width="100%" height="40" alt="Blues">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/Blues.png" width="100%" height="40" alt="Blues">
 pub const BLUES: Gradient = Gradient {
     eval: &Sequential {
         name: "Blues",
@@ -19,7 +19,7 @@ pub const BLUES: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Greens.png" width="100%" height="40" alt="Greens">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/Greens.png" width="100%" height="40" alt="Greens">
 pub const GREENS: Gradient = Gradient {
     eval: &Sequential {
         name: "Greens",
@@ -35,7 +35,7 @@ pub const GREENS: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Greys.png" width="100%" height="40" alt="Greys">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/Greys.png" width="100%" height="40" alt="Greys">
 pub const GREYS: Gradient = Gradient {
     eval: &Sequential {
         name: "Greys",
@@ -51,7 +51,7 @@ pub const GREYS: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Oranges.png" width="100%" height="40" alt="Oranges">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/Oranges.png" width="100%" height="40" alt="Oranges">
 pub const ORANGES: Gradient = Gradient {
     eval: &Sequential {
         name: "Oranges",
@@ -67,7 +67,7 @@ pub const ORANGES: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Purples.png" width="100%" height="40" alt="Purples">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/Purples.png" width="100%" height="40" alt="Purples">
 pub const PURPLES: Gradient = Gradient {
     eval: &Sequential {
         name: "Purples",
@@ -83,7 +83,7 @@ pub const PURPLES: Gradient = Gradient {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Reds.png" width="100%" height="40" alt="Reds">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/Reds.png" width="100%" height="40" alt="Reds">
 pub const REDS: Gradient = Gradient {
     eval: &Sequential {
         name: "Reds",

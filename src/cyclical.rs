@@ -7,7 +7,7 @@ use std::f64::consts as f64;
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/rainbow.png" width="100%" height="40" alt="rainbow">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/rainbow.png" width="100%" height="40" alt="rainbow">
 pub const RAINBOW: Gradient = Gradient { eval: &Rainbow };
 
 struct Rainbow;
@@ -28,7 +28,7 @@ impl EvalGradient for Rainbow {
 
 /// &#8203;
 ///
-/// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/sinebow.png" width="100%" height="40" alt="sinebow">
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/img/sinebow.png" width="100%" height="40" alt="sinebow">
 pub const SINEBOW: Gradient = Gradient { eval: &Sinebow };
 
 struct Sinebow;
