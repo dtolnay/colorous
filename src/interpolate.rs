@@ -1,8 +1,8 @@
 use crate::Color;
 
 fn basis(colors: &[Color], component: fn(&Color) -> u8, t: f64) -> u8 {
-    let n = colors.len();
-    let i = (t * n as f64).floor() as usize;
+    let n = colors.len() - 1;
+    let i = ((t * n as f64).floor() as usize).min(n - 1);
 
     let v1 = component(&colors[i]);
     let v2 = component(&colors[i + 1]);
