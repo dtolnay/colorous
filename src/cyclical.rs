@@ -1,3 +1,5 @@
+#![allow(clippy::many_single_char_names)]
+
 use crate::cubehelix::Cubehelix;
 use crate::gradient::EvalGradient;
 use crate::{Color, Gradient};

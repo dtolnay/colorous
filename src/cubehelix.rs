@@ -1,3 +1,5 @@
+#![allow(clippy::many_single_char_names)]
+
 use crate::Color;
 use std::f64::consts as f64;
 
