@@ -1,0 +1,23 @@
+language: rust
+
+rust:
+  - nightly
+  - beta
+  - stable
+
+script:
+  - cargo test
+
+matrix:
+  include:
+    - rust: 1.32.0
+      script: cargo check
+    - name: Clippy
+      install:
+        - CLIPPY_NIGHTLY=nightly-$(curl -s https://rust-lang.github.io/rustup-components-history/x86_64-unknown-linux-gnu/clippy)
+        - echo "Latest nightly with Clippy is $CLIPPY_NIGHTLY"
+        - rustup set profile minimal
+        - rustup default "$CLIPPY_NIGHTLY"
+        - rustup component add clippy
+      script:
+        - cargo clippy -- -Dclippy::all
