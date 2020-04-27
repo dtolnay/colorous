@@ -19,10 +19,6 @@ impl Gradient {
         let t = t.max(0.0).min(1.0);
         self.eval.eval_continuous(t)
     }
-
-    pub fn name(&self) -> &'static str {
-        self.eval.name()
-    }
 }
 
 pub(crate) trait EvalGradient {
@@ -41,6 +37,6 @@ pub(crate) trait EvalGradient {
 
 impl Debug for Gradient {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "Gradient({})", self.name())
+        write!(f, "Gradient({})", self.eval.name())
     }
 }
