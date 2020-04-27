@@ -262,6 +262,8 @@
 //!
 //! Ten categorical colors authored by Tableau as part of [Tableau 10](https://www.tableau.com/about/blog/2016/7/colors-upgrade-tableau-10-56782).
 
+#![doc(html_root_url = "https://docs.rs/colorous/0.0.0")]
+
 #[macro_use]
 mod macros;
 
