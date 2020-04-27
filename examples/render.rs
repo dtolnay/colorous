@@ -77,7 +77,9 @@ fn main() {
             if border {
                 image::Rgb([0, 0, 0])
             } else {
-                let Color { r, g, b } = gradient.eval_rational(x, width);
+                let i = x.saturating_sub(10);
+                let n = width - 20;
+                let Color { r, g, b } = gradient.eval_rational(i, n);
                 image::Rgb([r, g, b])
             }
         } else if let Some((scheme, _)) = CATEGORICALS.get(row - GRADIENTS.len()) {
