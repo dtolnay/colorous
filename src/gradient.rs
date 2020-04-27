@@ -10,6 +10,9 @@ pub struct Gradient {
 impl Gradient {
     /// Samples the gradient at position `i/n`. Requires `0 ≤ i < n`.
     pub fn eval_rational(&self, i: usize, n: usize) -> Color {
+        if n == 0 {
+            panic!("invalid argument n=0 in Gradient::eval_rational");
+        }
         let i = cmp::min(i, n - 1);
         self.eval.eval_rational(i, n)
     }
