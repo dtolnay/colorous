@@ -42,6 +42,8 @@ impl EvalGradient for Diverging {
     }
 }
 
+/// &#8203;
+///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/BrBG.png" width="100%" height="40" alt="BrBG">
 pub const BROWN_GREEN: Gradient = Gradient {
     eval: &Diverging {
@@ -58,6 +60,8 @@ pub const BROWN_GREEN: Gradient = Gradient {
     },
 };
 
+/// &#8203;
+///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/PRGn.png" width="100%" height="40" alt="PRGn">
 pub const PURPLE_GREEN: Gradient = Gradient {
     eval: &Diverging {
@@ -74,6 +78,8 @@ pub const PURPLE_GREEN: Gradient = Gradient {
     },
 };
 
+/// &#8203;
+///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/PiYG.png" width="100%" height="40" alt="PiYG">
 pub const PINK_GREEN: Gradient = Gradient {
     eval: &Diverging {
@@ -90,6 +96,8 @@ pub const PINK_GREEN: Gradient = Gradient {
     },
 };
 
+/// &#8203;
+///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/PuOr.png" width="100%" height="40" alt="PuOr">
 pub const PURPLE_ORANGE: Gradient = Gradient {
     eval: &Diverging {
@@ -106,6 +114,8 @@ pub const PURPLE_ORANGE: Gradient = Gradient {
     },
 };
 
+/// &#8203;
+///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/RdBu.png" width="100%" height="40" alt="RdBu">
 pub const RED_BLUE: Gradient = Gradient {
     eval: &Diverging {
@@ -122,6 +132,8 @@ pub const RED_BLUE: Gradient = Gradient {
     },
 };
 
+/// &#8203;
+///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/RdGy.png" width="100%" height="40" alt="RdGy">
 pub const RED_GREY: Gradient = Gradient {
     eval: &Diverging {
@@ -138,6 +150,8 @@ pub const RED_GREY: Gradient = Gradient {
     },
 };
 
+/// &#8203;
+///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/RdYlBu.png" width="100%" height="40" alt="RdYlBu">
 pub const RED_YELLOW_BLUE: Gradient = Gradient {
     eval: &Diverging {
@@ -154,6 +168,8 @@ pub const RED_YELLOW_BLUE: Gradient = Gradient {
     },
 };
 
+/// &#8203;
+///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/RdYlGn.png" width="100%" height="40" alt="RdYlGn">
 pub const RED_YELLOW_GREEN: Gradient = Gradient {
     eval: &Diverging {
@@ -170,6 +186,8 @@ pub const RED_YELLOW_GREEN: Gradient = Gradient {
     },
 };
 
+/// &#8203;
+///
 /// <img src="https://raw.githubusercontent.com/dtolnay/essay/img/Spectral.png" width="100%" height="40" alt="Spectral">
 pub const SPECTRAL: Gradient = Gradient {
     eval: &Diverging {
