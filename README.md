@@ -27,7 +27,7 @@ for i in 0..100 {
 
 <br>
 
-## Sequential (Multi-Hue)
+## Sequential (multi-hue)
 
 <a href="#Turbo" name="Turbo">#</a> colorous::<b>TURBO</b>
 
@@ -133,7 +133,7 @@ A 180° rotation of [Niccoli’s perceptual rainbow](https://mycarta.wordpress.c
 
 <br>
 
-## Sequential (Single Hue)
+## Sequential (single-hue)
 
 <a href="#Blues" name="Blues">#</a> colorous::<b>BLUES</b>
 

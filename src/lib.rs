@@ -26,7 +26,7 @@
 //!
 //! <br><br>
 //!
-//! ## Sequential (Multi-Hue)
+//! ## Sequential (multi-hue)
 //!
 //! <a href="#Turbo" name="Turbo">#</a> colorous::<b>TURBO</b>
 //!
@@ -132,7 +132,7 @@
 //!
 //! <br><br>
 //!
-//! ## Sequential (Single Hue)
+//! ## Sequential (single-hue)
 //!
 //! <a href="#Blues" name="Blues">#</a> colorous::<b>BLUES</b>
 //!
