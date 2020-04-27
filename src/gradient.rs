@@ -8,11 +8,13 @@ pub struct Gradient {
 }
 
 impl Gradient {
+    /// Samples the gradient at position `i/n`. Requires `0 ≤ i < n`.
     pub fn eval_rational(&self, i: usize, n: usize) -> Color {
         let i = cmp::min(i, n - 1);
         self.eval.eval_rational(i, n)
     }
 
+    /// Samples the gradient at position `t`. Requires `0.0 ≤ t ≤ 1.0`.
     pub fn eval_continuous(&self, t: f64) -> Color {
         let t = t.max(0.0).min(1.0);
         self.eval.eval_continuous(t)
