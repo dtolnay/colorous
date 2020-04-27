@@ -272,6 +272,7 @@
     clippy::doc_markdown,
     clippy::must_use_candidate,
     clippy::shadow_unrelated,
+    clippy::trivially_copy_pass_by_ref,
     clippy::unreadable_literal
 )]
 

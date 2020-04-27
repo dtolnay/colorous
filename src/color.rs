@@ -18,6 +18,24 @@ pub struct Color {
     pub b: u8,
 }
 
+impl Color {
+    pub fn as_tuple(&self) -> (u8, u8, u8) {
+        (self.r, self.g, self.b)
+    }
+
+    pub fn into_tuple(self) -> (u8, u8, u8) {
+        self.as_tuple()
+    }
+
+    pub fn as_array(&self) -> [u8; 3] {
+        [self.r, self.g, self.b]
+    }
+
+    pub fn into_array(self) -> [u8; 3] {
+        self.as_array()
+    }
+}
+
 /// `#000000`
 impl Default for Color {
     fn default() -> Self {
