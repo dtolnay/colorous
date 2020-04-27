@@ -10,8 +10,11 @@ use std::fmt::{self, Debug, LowerHex, UpperHex};
 /// - `format!("#{:X}", color)`&ensp;&#10230;&ensp;`#F0F0F0`
 #[derive(Copy, Clone)]
 pub struct Color {
+    /// Red
     pub r: u8,
+    /// Green
     pub g: u8,
+    /// Blue
     pub b: u8,
 }
 
