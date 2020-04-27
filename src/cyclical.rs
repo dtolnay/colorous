@@ -17,6 +17,10 @@ impl EvalGradient for Rainbow {
         "Rainbow"
     }
 
+    fn eval_rational(&self, i: usize, n: usize) -> Color {
+        eval_rational(self, i, n)
+    }
+
     fn eval_continuous(&self, t: f64) -> Color {
         let ts = (t - 0.5).abs();
         let h = 360.0 * t - 100.0;
@@ -38,6 +42,10 @@ impl EvalGradient for Sinebow {
         "Sinebow"
     }
 
+    fn eval_rational(&self, i: usize, n: usize) -> Color {
+        eval_rational(self, i, n)
+    }
+
     fn eval_continuous(&self, t: f64) -> Color {
         let t = (0.5 - t) * f64::PI;
         let x = t.sin();
@@ -48,4 +56,12 @@ impl EvalGradient for Sinebow {
         let b = (255.0 * x * x) as u8;
         Color { r, g, b }
     }
+}
+
+// The default implementation in EvalGradient::eval_rational evaluates the
+// gradient at `i/(n-1)` to hit both the very first and very last color in the
+// gradient. For cyclical gradients the very first and very last color are the
+// same, so we want a different behavior.
+fn eval_rational(cyclic_gradient: &dyn EvalGradient, i: usize, n: usize) -> Color {
+    cyclic_gradient.eval_continuous(i as f64 / n as f64)
 }
