@@ -17,8 +17,5 @@ image = "0.23"
 imageproc = "0.20"
 rusttype = "0.8"
 
-[badges]
-travis-ci = { repository = "dtolnay/colorous" }
-
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
