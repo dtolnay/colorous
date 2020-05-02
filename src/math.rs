@@ -16,7 +16,6 @@ pub(crate) trait F32Ext: Sized {
     fn sin(self) -> f32;
 }
 
-
 impl F32Ext for f32 {
     fn abs(self) -> f32 {
         f32::from_bits(self.to_bits() & 0x7FFF_FFFF)
