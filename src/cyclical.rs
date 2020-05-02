@@ -3,7 +3,11 @@
 use crate::cubehelix::Cubehelix;
 use crate::gradient::EvalGradient;
 use crate::{Color, Gradient};
-use std::f32::consts as f32;
+use core::f32::consts as f32;
+
+#[cfg(not(feature = "std"))]
+#[allow(unused_imports)]
+use crate::math::F32Ext;
 
 /// &#8203;
 ///

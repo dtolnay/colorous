@@ -1,6 +1,6 @@
 use crate::color::Color;
-use std::cmp;
-use std::fmt::{self, Debug};
+use core::cmp;
+use core::fmt::{self, Debug};
 
 #[derive(Copy, Clone)]
 pub struct Gradient {
