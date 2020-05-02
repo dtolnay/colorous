@@ -2,12 +2,9 @@
 
 use crate::cubehelix::Cubehelix;
 use crate::gradient::EvalGradient;
+use crate::math::{abs, sin};
 use crate::{Color, Gradient};
 use core::f32::consts as f32;
-
-#[cfg(not(feature = "std"))]
-#[allow(unused_imports)]
-use crate::math::F32Ext;
 
 /// &#8203;
 ///
@@ -26,7 +23,7 @@ impl EvalGradient for Rainbow {
     }
 
     fn eval_continuous(&self, t: f32) -> Color {
-        let ts = (t - 0.5).abs();
+        let ts = abs(t - 0.5);
         let h = 360.0 * t - 100.0;
         let s = 1.5 - 1.5 * ts;
         let l = 0.8 - 0.9 * ts;
@@ -52,11 +49,11 @@ impl EvalGradient for Sinebow {
 
     fn eval_continuous(&self, t: f32) -> Color {
         let t = (0.5 - t) * f32::PI;
-        let x = t.sin();
+        let x = sin(t);
         let r = (255.0 * x * x) as u8;
-        let x = (t + f32::FRAC_PI_3).sin();
+        let x = sin(t + f32::FRAC_PI_3);
         let g = (255.0 * x * x) as u8;
-        let x = (t + 2.0 * f32::FRAC_PI_3).sin();
+        let x = sin(t + 2.0 * f32::FRAC_PI_3);
         let b = (255.0 * x * x) as u8;
         Color { r, g, b }
     }
