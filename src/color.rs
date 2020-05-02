@@ -1,4 +1,4 @@
-use std::fmt::{self, Debug, LowerHex, UpperHex};
+use core::fmt::{self, Debug, LowerHex, UpperHex};
 
 /// &#8203;
 ///

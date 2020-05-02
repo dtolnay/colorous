@@ -6,6 +6,7 @@ rust:
   - stable
 
 script:
+  - cargo test --no-default-features
   - cargo test
 
 matrix:

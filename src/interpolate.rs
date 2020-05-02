@@ -1,5 +1,9 @@
 use crate::Color;
 
+#[cfg(not(feature = "std"))]
+#[allow(unused_imports)]
+use crate::math::F32Ext;
+
 fn basis(colors: &[Color], component: fn(&Color) -> u8, t: f32) -> u8 {
     let n = colors.len() - 1;
     let i = ((t * n as f32).floor() as usize).min(n - 1);

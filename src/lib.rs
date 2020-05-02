@@ -262,6 +262,7 @@
 //!
 //! Ten categorical colors authored by Tableau as part of [Tableau 10](https://www.tableau.com/about/blog/2016/7/colors-upgrade-tableau-10-56782).
 
+#![no_std]
 #![doc(html_root_url = "https://docs.rs/colorous/1.0.1")]
 #![warn(clippy::pedantic)]
 #![allow(
@@ -276,6 +277,9 @@
     clippy::unreadable_literal
 )]
 
+#[cfg(feature = "std")]
+extern crate std;
+
 #[macro_use]
 mod macros;
 
@@ -286,6 +290,8 @@ mod cyclical;
 mod diverging;
 mod gradient;
 mod interpolate;
+#[cfg(not(feature = "std"))]
+mod math;
 mod sequential;
 mod sequential_multi;
 mod sequential_single;
