@@ -277,9 +277,6 @@
     clippy::unreadable_literal
 )]
 
-#[cfg(feature = "std")]
-extern crate std;
-
 #[macro_use]
 mod macros;
 
@@ -290,11 +287,12 @@ mod cyclical;
 mod diverging;
 mod gradient;
 mod interpolate;
-#[cfg(not(feature = "std"))]
-mod math;
 mod sequential;
 mod sequential_multi;
 mod sequential_single;
+
+#[cfg_attr(not(feature = "std"), path = "math_nostd.rs")]
+mod math;
 
 pub use crate::categorical::{
     ACCENT, CATEGORY10, DARK2, PAIRED, PASTEL1, PASTEL2, SET1, SET2, SET3, TABLEAU10,

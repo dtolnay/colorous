@@ -1,11 +1,8 @@
 #![allow(clippy::many_single_char_names)]
 
+use crate::math::{cos, sin};
 use crate::Color;
 use core::f32::consts as f32;
-
-#[cfg(not(feature = "std"))]
-#[allow(unused_imports)]
-use crate::math::F32Ext;
 
 #[derive(Copy, Clone)]
 pub(crate) struct Cubehelix {
@@ -20,8 +17,8 @@ impl From<Cubehelix> for Color {
         let h = (c.h + 120.0) * DEG2RAD;
         let l = c.l;
         let a = c.s * l * (1.0 - l);
-        let cosh = h.cos();
-        let sinh = h.sin();
+        let cosh = cos(h);
+        let sinh = sin(h);
         let r = (255.0 * (l - a * (0.14861 * cosh - 1.78277 * sinh)).min(1.0)) as u8;
         let g = (255.0 * (l - a * (0.29227 * cosh + 0.90649 * sinh)).min(1.0)) as u8;
         let b = (255.0 * (l + a * (1.97294 * cosh)).min(1.0)) as u8;
