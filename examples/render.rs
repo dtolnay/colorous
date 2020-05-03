@@ -110,7 +110,7 @@ fn main() {
         };
         imageproc::drawing::draw_text_mut(
             &mut imgbuf,
-            image::Rgb([0, 0, 0]),
+            image::Rgb([100, 100, 100]),
             10,
             (row * grid + 10) as u32,
             rusttype::Scale::uniform(24.0),
