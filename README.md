@@ -1,7 +1,7 @@
 Colorous
 ========
 
-[![Build Status](https://api.travis-ci.com/dtolnay/colorous.svg?branch=master)](https://travis-ci.com/dtolnay/colorous)
+[![Build Status](https://img.shields.io/github/workflow/status/dtolnay/colorous/CI/master)](https://github.com/dtolnay/colorous/actions?query=branch%3Amaster)
 [![Latest Version](https://img.shields.io/crates/v/colorous.svg)](https://crates.io/crates/colorous)
 [![Rust Documentation](https://img.shields.io/badge/api-rustdoc-blue.svg)](https://docs.rs/colorous)
 
