@@ -285,6 +285,9 @@
     clippy::unreadable_literal
 )]
 
+#[cfg(feature = "std")]
+extern crate std;
+
 #[macro_use]
 mod macros;
 
