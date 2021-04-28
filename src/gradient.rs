@@ -4,7 +4,7 @@ use core::fmt::{self, Debug};
 
 #[derive(Copy, Clone)]
 pub struct Gradient {
-    pub(crate) eval: &'static dyn EvalGradient,
+    pub(crate) eval: &'static (dyn EvalGradient + Send + Sync),
 }
 
 impl Gradient {
