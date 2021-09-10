@@ -38,6 +38,7 @@ impl Color {
 }
 
 /// `#000000`
+#[allow(clippy::derivable_impls)] // https://github.com/rust-lang/rust-clippy/issues/7654
 impl Default for Color {
     fn default() -> Self {
         Color { r: 0, g: 0, b: 0 }
