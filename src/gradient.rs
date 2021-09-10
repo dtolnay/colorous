@@ -16,6 +16,7 @@ pub struct Gradient {
 
 impl Gradient {
     /// Samples the gradient at position `i/n`. Requires `0 ≤ i < n`.
+    #[allow(clippy::missing_panics_doc)]
     pub fn eval_rational(&self, i: usize, n: usize) -> Color {
         if n == 0 {
             panic!("invalid argument n=0 in Gradient::eval_rational");
