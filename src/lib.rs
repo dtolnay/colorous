@@ -272,7 +272,6 @@
 
 #![no_std]
 #![doc(html_root_url = "https://docs.rs/colorous/1.0.5")]
-#![warn(clippy::pedantic)]
 #![allow(
     clippy::cast_lossless,
     clippy::cast_possible_truncation,
