@@ -15,8 +15,8 @@ categories = ["graphics"]
 [dev-dependencies]
 dejavu = "=2.37.0"
 image = "0.23"
-imageproc = "0.20"
-rusttype = "0.8"
+imageproc = "0.22"
+rusttype = "0.9"
 
 [features]
 default = ["std"]

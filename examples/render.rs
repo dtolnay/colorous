@@ -98,7 +98,7 @@ fn main() {
     }
 
     let dejavu = dejavu::sans::regular();
-    let font = rusttype::Font::from_bytes(dejavu).unwrap();
+    let font = rusttype::Font::try_from_bytes(dejavu).unwrap();
 
     for row in 0..rows {
         let name = if let Some((_, name)) = GRADIENTS.get(row) {
