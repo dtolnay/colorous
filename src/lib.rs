@@ -278,6 +278,7 @@
     clippy::cast_precision_loss,
     clippy::cast_sign_loss,
     clippy::doc_markdown,
+    clippy::manual_assert,
     clippy::must_use_candidate,
     clippy::shadow_unrelated,
     clippy::trivially_copy_pass_by_ref,
