@@ -1,5 +1,3 @@
-extern crate std;
-
 pub fn abs(x: f32) -> f32 {
     x.abs()
 }
