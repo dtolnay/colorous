@@ -1,12 +1,14 @@
 use crate::color::Color;
 use core::cmp;
 use core::fmt::{self, Debug};
+#[cfg(not(any(feature = "std", unwind_safe_std_only)))]
+use core::panic::{RefUnwindSafe, UnwindSafe};
 #[cfg(feature = "std")]
 use std::panic::{RefUnwindSafe, UnwindSafe};
 
-#[cfg(feature = "std")]
+#[cfg(any(feature = "std", not(unwind_safe_std_only)))]
 type DynEvalGradient = dyn EvalGradient + Send + Sync + UnwindSafe + RefUnwindSafe;
-#[cfg(not(feature = "std"))]
+#[cfg(all(not(feature = "std"), unwind_safe_std_only))]
 type DynEvalGradient = dyn EvalGradient + Send + Sync;
 
 #[derive(Copy, Clone)]
