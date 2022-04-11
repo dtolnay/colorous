@@ -14,8 +14,8 @@ categories = ["graphics"]
 
 [dev-dependencies]
 dejavu = "=2.37.0"
-image = "0.23"
-imageproc = "0.22"
+image = "0.24"
+imageproc = "0.23"
 rusttype = "0.9"
 
 [features]

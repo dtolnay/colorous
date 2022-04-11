@@ -112,7 +112,7 @@ fn main() {
             &mut imgbuf,
             image::Rgb([100, 100, 100]),
             10,
-            (row * grid + 10) as u32,
+            (row * grid + 10) as i32,
             rusttype::Scale::uniform(24.0),
             &font,
             name,
