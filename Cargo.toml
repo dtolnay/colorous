@@ -2,7 +2,7 @@
 name = "colorous"
 version = "1.0.6" # remember to update html_root_url
 authors = ["David Tolnay <dtolnay@gmail.com>"]
-categories = ["graphics"]
+categories = ["graphics", "no-std"]
 description = "Professional color schemes ported from d3-scale-chromatic"
 documentation = "https://docs.rs/colorous"
 edition = "2018"
