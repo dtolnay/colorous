@@ -8,7 +8,6 @@ documentation = "https://docs.rs/colorous"
 edition = "2018"
 keywords = ["color", "gradient"]
 license = "Apache-2.0"
-readme = "README.md"
 repository = "https://github.com/dtolnay/colorous"
 rust-version = "1.32"
 
