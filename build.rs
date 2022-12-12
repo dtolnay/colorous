@@ -4,6 +4,8 @@ use std::str;
 
 // The rustc-cfg strings below are *not* public API.
 fn main() {
+    println!("cargo:rerun-if-changed=build.rs");
+
     let minor = match rustc_minor_version() {
         Some(minor) => minor,
         None => return,
