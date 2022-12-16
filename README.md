@@ -4,7 +4,7 @@ Colorous
 [<img alt="github" src="https://img.shields.io/badge/github-dtolnay/colorous-8da0cb?style=for-the-badge&labelColor=555555&logo=github" height="20">](https://github.com/dtolnay/colorous)
 [<img alt="crates.io" src="https://img.shields.io/crates/v/colorous.svg?style=for-the-badge&color=fc8d62&logo=rust" height="20">](https://crates.io/crates/colorous)
 [<img alt="docs.rs" src="https://img.shields.io/badge/docs.rs-colorous-66c2a5?style=for-the-badge&labelColor=555555&logo=docs.rs" height="20">](https://docs.rs/colorous)
-[<img alt="build status" src="https://img.shields.io/github/workflow/status/dtolnay/colorous/CI/master?style=for-the-badge" height="20">](https://github.com/dtolnay/colorous/actions?query=branch%3Amaster)
+[<img alt="build status" src="https://img.shields.io/github/actions/workflow/status/dtolnay/colorous/ci.yml?branch=master&style=for-the-badge" height="20">](https://github.com/dtolnay/colorous/actions?query=branch%3Amaster)
 
 This crate provides a collection of sequential, diverging and categorical color
 schemes ported from [d3-scale-chromatic]. Each color scheme may be sampled using
