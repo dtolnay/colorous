@@ -9,7 +9,7 @@ edition = "2018"
 keywords = ["color", "gradient"]
 license = "Apache-2.0"
 repository = "https://github.com/dtolnay/colorous"
-rust-version = "1.32"
+rust-version = "1.60"
 
 [dev-dependencies]
 dejavu = "=2.37.0"
