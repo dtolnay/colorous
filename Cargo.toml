@@ -12,10 +12,10 @@ repository = "https://github.com/dtolnay/colorous"
 rust-version = "1.60"
 
 [dev-dependencies]
+ab_glyph = "0.2"
 dejavu = "=2.37.0"
-image = "0.24"
-imageproc = "0.23"
-rusttype = "0.9"
+image = "0.25"
+imageproc = "0.24"
 
 [features]
 default = ["std"]

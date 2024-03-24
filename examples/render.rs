@@ -98,7 +98,7 @@ fn main() {
     }
 
     let dejavu = dejavu::sans::regular();
-    let font = rusttype::Font::try_from_bytes(dejavu).unwrap();
+    let font = ab_glyph::FontRef::try_from_slice(dejavu).unwrap();
 
     for row in 0..rows {
         let name = if let Some((_, name)) = GRADIENTS.get(row) {
@@ -113,7 +113,7 @@ fn main() {
             image::Rgb([100, 100, 100]),
             10,
             (row * grid + 10) as i32,
-            rusttype::Scale::uniform(24.0),
+            24.0,
             &font,
             name,
         );
