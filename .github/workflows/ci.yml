@@ -81,5 +81,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/install@cargo-outdated
-      - run: cargo outdated --workspace --ignore image --exit-code 1
+      - run: cargo outdated --workspace --exit-code 1
         continue-on-error: true  # https://github.com/kbknapp/cargo-outdated/issues/389
