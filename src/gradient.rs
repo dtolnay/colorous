@@ -29,7 +29,7 @@ impl Gradient {
 
     /// Samples the gradient at position `t`. Requires `0.0 ≤ t ≤ 1.0`.
     pub fn eval_continuous(&self, t: f64) -> Color {
-        let t = t.max(0.0).min(1.0);
+        let t = t.clamp(0.0, 1.0);
         self.eval.eval_continuous(t as f32)
     }
 }

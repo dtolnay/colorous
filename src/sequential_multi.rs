@@ -241,14 +241,11 @@ impl EvalGradient for Cividis {
 
     fn eval_continuous(&self, t: f32) -> Color {
         let r = (-4.54 - t * (35.34 - t * (2381.73 - t * (6402.7 - t * (7024.72 - t * 2710.57)))))
-            .max(0.0)
-            .min(255.0) as u8;
+            .clamp(0.0, 255.0) as u8;
         let g = (32.49 + t * (170.73 + t * (52.82 - t * (131.46 - t * (176.58 - t * 67.37)))))
-            .max(0.0)
-            .min(255.0) as u8;
+            .clamp(0.0, 255.0) as u8;
         let b = (81.24 + t * (442.36 - t * (2482.43 - t * (6167.24 - t * (6614.94 - t * 2475.67)))))
-            .max(0.0)
-            .min(255.0) as u8;
+            .clamp(0.0, 255.0) as u8;
         Color { r, g, b }
     }
 }
