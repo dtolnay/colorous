@@ -1,3 +1,5 @@
+#![allow(clippy::cast_lossless)]
+
 #[test]
 fn test_continuous() {
     let gradients = vec![
