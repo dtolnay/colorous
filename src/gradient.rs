@@ -1,19 +1,11 @@
 use crate::color::Color;
 use core::cmp;
 use core::fmt::{self, Debug};
-#[cfg(not(any(feature = "std", unwind_safe_std_only)))]
 use core::panic::{RefUnwindSafe, UnwindSafe};
-#[cfg(feature = "std")]
-use std::panic::{RefUnwindSafe, UnwindSafe};
-
-#[cfg(any(feature = "std", not(unwind_safe_std_only)))]
-type DynEvalGradient = dyn EvalGradient + Send + Sync + UnwindSafe + RefUnwindSafe;
-#[cfg(all(not(feature = "std"), unwind_safe_std_only))]
-type DynEvalGradient = dyn EvalGradient + Send + Sync;
 
 #[derive(Copy, Clone)]
 pub struct Gradient {
-    pub(crate) eval: &'static DynEvalGradient,
+    pub(crate) eval: &'static (dyn EvalGradient + Send + Sync + UnwindSafe + RefUnwindSafe),
 }
 
 impl Gradient {
