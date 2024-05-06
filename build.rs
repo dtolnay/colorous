@@ -11,6 +11,10 @@ fn main() {
         None => return,
     };
 
+    if minor >= 80 {
+        println!("cargo:rustc-check-cfg=cfg(unwind_safe_std_only)");
+    }
+
     if minor < 56 {
         println!("cargo:rustc-cfg=unwind_safe_std_only");
     }
