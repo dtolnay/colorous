@@ -34,6 +34,11 @@ jobs:
       - name: Enable type layout randomization
         run: echo RUSTFLAGS=${RUSTFLAGS}\ -Zrandomize-layout >> $GITHUB_ENV
         if: matrix.rust == 'nightly'
+      - name: Pin wasm-bindgen (https://github.com/rustwasm/wasm-bindgen/issues/4304)
+        run: |
+          cargo update js-sys --precise 0.3.72
+          cargo update wasm-bindgen --precise 0.2.95
+        if: matrix.rust != 'nightly'
       - run: cargo test --no-default-features
       - run: cargo test
       - uses: actions/upload-artifact@v4
