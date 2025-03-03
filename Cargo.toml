@@ -1,6 +1,6 @@
 [package]
 name = "colorous"
-version = "1.0.15"
+version = "1.0.16"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 categories = ["graphics", "no-std", "no-std::no-alloc"]
 description = "Professional color schemes ported from d3-scale-chromatic"
