@@ -9,7 +9,7 @@ edition = "2021"
 keywords = ["color", "gradient"]
 license = "Apache-2.0"
 repository = "https://github.com/dtolnay/colorous"
-rust-version = "1.60"
+rust-version = "1.68"
 
 [dev-dependencies]
 ab_glyph = "0.2"
