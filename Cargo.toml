@@ -15,7 +15,7 @@ rust-version = "1.68"
 ab_glyph = "0.2"
 dejavu = "=2.37.0"
 image = "0.25"
-imageproc = "0.25"
+imageproc = "0.26"
 
 [features]
 default = ["std"]
