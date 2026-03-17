@@ -269,6 +269,24 @@
 //! <img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Tableau10.png" width="100%" height="40" alt="Tableau10">
 //!
 //! Ten categorical colors authored by Tableau as part of [Tableau 10](https://www.tableau.com/about/blog/2016/7/colors-upgrade-tableau-10-56782).
+//!
+//! <a href="#Tableau20" name="Tableau20">#</a> colorous::<b>TABLEAU20</b>
+//!
+//! <img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Tableau20.png" width="100%" height="40" alt="Tableau20">
+//!
+//! <a href="#Petroff6" name="Petroff6">#</a> colorous::<b>PETROFF6</b>
+//!
+//! <img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Petroff6.png" width="100%" height="40" alt="Petroff6">
+//!
+//! <a href="#Petroff8" name="Petroff8">#</a> colorous::<b>PETROFF8</b>
+//!
+//! <img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Petroff8.png" width="100%" height="40" alt="Petroff8">
+//!
+//! <a href="#Petroff10" name="Petroff10">#</a> colorous::<b>PETROFF10</b>
+//!
+//! <img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Petroff10.png" width="100%" height="40" alt="Petroff10">
+//!
+//! Accessible color sequences authored by M. Petroff, [arxiv](https://arxiv.org/abs/2107.02270).
 
 #![no_std]
 #![doc(html_root_url = "https://docs.rs/colorous/1.0.16")]
@@ -307,7 +325,8 @@ mod sequential_single;
 mod math;
 
 pub use crate::categorical::{
-    ACCENT, CATEGORY10, DARK2, PAIRED, PASTEL1, PASTEL2, SET1, SET2, SET3, TABLEAU10,
+    ACCENT, CATEGORY10, DARK2, PAIRED, PASTEL1, PASTEL2, PETROFF10, PETROFF6, PETROFF8, SET1, SET2,
+    SET3, TABLEAU10, TABLEAU20,
 };
 pub use crate::color::Color;
 pub use crate::cyclical::{RAINBOW, SINEBOW};
