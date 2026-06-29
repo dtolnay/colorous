@@ -67,5 +67,33 @@ pub const SET3: [Color; 12] = colors! {
 ///
 /// <img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Tableau10.png" width="100%" height="40" alt="Tableau10">
 pub const TABLEAU10: [Color; 10] = colors! {
-    0x4e79a7 0xf28e2c 0xe15759 0x76b7b2 0x59a14f 0xedc949 0xaf7aa1 0xff9da7 0x9c755f 0xbab0ab
+    0x4e79a7 0xf28e2b 0xe15759 0x76b7b2 0x59a14f 0xedc948 0xb07aa1 0xff9da7 0x9c755f 0xbab0ac
+};
+
+/// &#8203;
+///
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Tableau20.png" width="100%" height="40" alt="Tableau20">
+pub const TABLEAU20: [Color; 20] = colors! {
+    0x4e79a7 0xa0cbe8 0xf28e2b 0xffbe7d 0x59a14f 0x8cd17d 0xb6992d 0xf1ce63 0x499894 0x86bcb6 0xe15759 0xff9d9a 0x79706e 0xbab0ac 0xd37295 0xfabfd2 0xb07aa1 0xd4a6c8 0x9d7660 0xd7b5a6
+};
+
+/// &#8203;
+///
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Petroff6.png" width="100%" height="40" alt="Petroff6">
+pub const PETROFF6: [Color; 6] = colors! {
+    0x5790fc 0xf89c20 0xe42536 0x964a8b 0x9c9ca1 0x7a21dd
+};
+
+/// &#8203;
+///
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Petroff8.png" width="100%" height="40" alt="Petroff8">
+pub const PETROFF8: [Color; 8] = colors! {
+    0x1845fb 0xff5e02 0xc91f16 0xc849a9 0xadad7d 0x86c8dd 0x578dff 0x656364
+};
+
+/// &#8203;
+///
+/// <img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Petroff10.png" width="100%" height="40" alt="Petroff10">
+pub const PETROFF10: [Color; 10] = colors! {
+    0x3f90da 0xffa90e 0xbd1f01 0x94a4a2 0x832db6 0xa96b59 0xe76300 0xb9ac70 0x717581 0x92dadd
 };

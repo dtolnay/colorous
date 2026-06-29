@@ -47,7 +47,7 @@ const GRADIENTS: [(Gradient, &str); 38] = [
     (SINEBOW, "SINEBOW"),
 ];
 
-const CATEGORICALS: [(&[Color], &str); 10] = [
+const CATEGORICALS: [(&[Color], &str); 14] = [
     (&CATEGORY10, "CATEGORY10"),
     (&ACCENT, "ACCENT"),
     (&DARK2, "DARK2"),
@@ -58,6 +58,10 @@ const CATEGORICALS: [(&[Color], &str); 10] = [
     (&SET2, "SET2"),
     (&SET3, "SET3"),
     (&TABLEAU10, "TABLEAU10"),
+    (&TABLEAU20, "TABLEAU20"),
+    (&PETROFF6, "PETROFF6"),
+    (&PETROFF8, "PETROFF8"),
+    (&PETROFF10, "PETROFF10"),
 ];
 
 fn main() {

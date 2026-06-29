@@ -264,6 +264,24 @@ Categorical color schemes are exposed simply as an array `[Color; N]`.
 
 Ten categorical colors authored by Tableau as part of [Tableau 10](https://www.tableau.com/about/blog/2016/7/colors-upgrade-tableau-10-56782).
 
+<a href="#Tableau20" name="Tableau20">#</a> colorous::<b>TABLEAU20</b>
+
+<img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Tableau20.png" width="100%" height="40" alt="Tableau20">
+
+<a href="#Petroff6" name="Petroff6">#</a> colorous::<b>PETROFF6</b>
+
+<img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Petroff6.png" width="100%" height="40" alt="Petroff6">
+
+<a href="#Petroff8" name="Petroff8">#</a> colorous::<b>PETROFF8</b>
+
+<img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Petroff8.png" width="100%" height="40" alt="Petroff8">
+
+<a href="#Petroff10" name="Petroff10">#</a> colorous::<b>PETROFF10</b>
+
+<img src="https://raw.githubusercontent.com/dtolnay/colorous/readme/Petroff10.png" width="100%" height="40" alt="Petroff10">
+
+Accessible color sequences authored by M. Petroff, [arxiv](https://arxiv.org/abs/2107.02270).
+
 <br>
 
 ## License
